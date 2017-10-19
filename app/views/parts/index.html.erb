@@ -1,0 +1,11 @@
+<section id = "inventory-index-page">
+  <h1>Inventory</h1>
+
+  <% Warehouse.all.each do |w|%>
+  <h3><%= w.city %> <%= w.location_code  %> :</h3>
+  <h4>Parts:</h4>
+  <% Part.unique_parts(w.id).each do |part| %>
+  <p>Part Number: <%=part.part_no%> Name: <%= part.name %> Count: <%= Part.number_of(part.part_no, w.id) %></p>
+  <% end %>
+  <% end %>
+</section>
