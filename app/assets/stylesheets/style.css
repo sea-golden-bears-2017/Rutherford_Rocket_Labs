@@ -110,6 +110,14 @@ input {
 .logout:focus {
   color: lime;
 }
+
+#manager-nav li {
+  float: none;
+}
+#manager-nav a {
+  text-decoration: none;
+  color: black;
+}
 /* end application.html styles */
 
 /* homepage styles */
@@ -188,10 +196,6 @@ input {
   border: 1px solid gray;
   border-radius: 25px;
   padding: 1.25em;
-}
-
-#new-employee-page input {
-  margin-top: .25em;
 }
 
 /* end new employee-page styles */

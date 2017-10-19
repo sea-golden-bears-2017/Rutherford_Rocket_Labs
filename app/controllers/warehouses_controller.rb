@@ -1,6 +1,12 @@
 class WarehousesController < ApplicationController
 
   def new
+    if manager_logged_in?
+      @warehouse = Warehouse.new()
+      render :new
+    else
+      redirect_to home_path
+    end
   end
 
   def create
