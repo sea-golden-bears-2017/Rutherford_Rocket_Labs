@@ -1,0 +1,16 @@
+/* css document */
+
+/* login page styles */
+
+#login-page {
+  width: 30%;
+  margin: 0 auto;
+  border: 1px solid gray;
+  padding: 1.25em;
+}
+
+input {
+  display: block
+}
+
+/* end login page styles */
