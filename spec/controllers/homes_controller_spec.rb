@@ -4,7 +4,7 @@ describe HomesController, type: :controller do
   describe "/home" do
     context "when user is logged in" do
       before(:each) do
-        session[:employee_id] = 6
+        session[:user_id] = 6
       end
       it 'returns a 200 status code' do
         get :home
