@@ -5,7 +5,7 @@ class WarehousesController < ApplicationController
 
   def create
     warehouse = Warehouse.new(warehouse_params)
-    warehouse.location_code = "#{warehouse.city}-#{rand(10000..99999).to_s}"
+    warehouse.location_code = "#{warehouse.city.upcase[0..2]}-#{rand(10000..99999).to_s}"
     warehouse.save
     redirect_to 'root_path'
   end
