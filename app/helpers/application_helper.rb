@@ -5,6 +5,6 @@ module ApplicationHelper
 
   def manager?
     user = User.find(session[:user_id])
-    return user.manager
+    return user.is_manager
   end
 end
