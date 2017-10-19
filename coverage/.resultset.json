@@ -4,6 +4,15 @@
       "/Users/apprentice/Rutherford_Rocket_Labs/app/helpers/application_helper.rb": [
         1,
         1,
+<<<<<<< HEAD
+        13,
+        null,
+        null,
+        1,
+        5,
+        2,
+        2,
+=======
         2,
         null,
         null,
@@ -11,23 +20,36 @@
         2,
         0,
         0,
+>>>>>>> master
         null,
         null,
         null,
         null,
         null,
         1,
+<<<<<<< HEAD
+        2,
+        null,
+=======
         0,
+>>>>>>> master
         null,
         null
       ],
       "/Users/apprentice/Rutherford_Rocket_Labs/app/controllers/homes_controller.rb": [
         1,
         1,
+<<<<<<< HEAD
+        4,
+        2,
+        null,
+        2,
+=======
         0,
         0,
         null,
         0,
+>>>>>>> master
         null,
         null,
         null
@@ -138,7 +160,10 @@
         0,
         0,
         0,
+<<<<<<< HEAD
+=======
         0,
+>>>>>>> master
         null,
         0,
         0,
@@ -148,7 +173,10 @@
         0,
         0,
         0,
+<<<<<<< HEAD
+=======
         null,
+>>>>>>> master
         0,
         null,
         null,
@@ -165,6 +193,10 @@
         0
       ]
     },
+<<<<<<< HEAD
+    "timestamp": 1508438419
+=======
     "timestamp": 1508440727
+>>>>>>> master
   }
 }
