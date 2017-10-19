@@ -4,6 +4,7 @@
       "/Users/apprentice/Rutherford_Rocket_Labs/app/helpers/application_helper.rb": [
         1,
         1,
+<<<<<<< HEAD
         7,
         null,
         null,
@@ -11,12 +12,22 @@
         3,
         2,
         2,
+=======
+        2,
+        null,
+        null,
+        1,
+        2,
+        0,
+        0,
+>>>>>>> master
         null,
         null,
         null,
         null,
         null,
         1,
+<<<<<<< HEAD
         2,
         null,
         null,
@@ -28,10 +39,30 @@
         null
       ],
       "/Users/apprentice/Rutherford_Rocket_Labs/app/models/application_record.rb": [
+=======
+        0,
+        null,
+        null
+      ],
+      "/Users/apprentice/Rutherford_Rocket_Labs/app/controllers/homes_controller.rb": [
+        1,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/apprentice/Rutherford_Rocket_Labs/app/controllers/application_controller.rb": [
+        1,
+>>>>>>> master
         1,
         1,
         null
       ],
+<<<<<<< HEAD
       "/Users/apprentice/Rutherford_Rocket_Labs/app/models/employee.rb": [
         1,
         1,
@@ -98,36 +129,129 @@
         0,
         0,
         0,
+=======
+      "/Users/apprentice/Rutherford_Rocket_Labs/app/controllers/sessions_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        5,
+        5,
+        0,
+        0,
+        null,
+        5,
+        5,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/apprentice/Rutherford_Rocket_Labs/app/controllers/warehouses_controller.rb": [
+        1,
+        null,
+        1,
+        2,
+        0,
+        0,
+        null,
+        2,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/apprentice/Rutherford_Rocket_Labs/app/models/warehouse.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/apprentice/Rutherford_Rocket_Labs/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/apprentice/Rutherford_Rocket_Labs/app/models/employee.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/apprentice/Rutherford_Rocket_Labs/app/channels/application_cable/channel.rb": [
         0,
         0,
         0,
         0
       ],
+      "/Users/apprentice/Rutherford_Rocket_Labs/app/channels/application_cable/connection.rb": [
+>>>>>>> master
+        0,
+        0,
+        0,
+        0
+      ],
+<<<<<<< HEAD
       "/Users/apprentice/Rutherford_Rocket_Labs/app/controllers/sessions_controller.rb": [
+=======
+      "/Users/apprentice/Rutherford_Rocket_Labs/app/controllers/employees_controller.rb": [
+>>>>>>> master
         0,
         null,
         0,
         0,
         0,
+<<<<<<< HEAD
         null,
+=======
+>>>>>>> master
         0,
         0,
         0,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
+<<<<<<< HEAD
+=======
         null,
+>>>>>>> master
         0,
         0,
         0,
         0,
+        0,
+<<<<<<< HEAD
+        null,
+=======
+>>>>>>> master
+        0,
+        0,
+        0,
+        0,
+<<<<<<< HEAD
         0
       ],
       "/Users/apprentice/Rutherford_Rocket_Labs/app/controllers/warehouses_controller.rb": [
+=======
+>>>>>>> master
         0,
         null,
         0,
@@ -140,6 +264,7 @@
         0,
         null,
         0,
+<<<<<<< HEAD
         0,
         0,
         0,
@@ -150,6 +275,9 @@
         0,
         0,
         0,
+=======
+        null,
+>>>>>>> master
         null,
         0
       ],
@@ -164,6 +292,10 @@
         0
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1508437958
+=======
+    "timestamp": 1508440727
+>>>>>>> master
   }
 }
