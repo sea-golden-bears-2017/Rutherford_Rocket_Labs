@@ -11,7 +11,6 @@ class EmployeesController < ApplicationController
 
   def create
     @employee = Employee.new(employee_params)
-    @employee.warehouse_id = 1
     if @employee.save
       redirect_to "/"
     else
@@ -27,7 +26,7 @@ class EmployeesController < ApplicationController
     elsif params[:employee][:is_manager] == 'false'
       params[:employee][:is_manager] = false
     end
-    params.require(:employee).permit(:first_name, :last_name, :employee_id, :password, :is_manager)
+    params.require(:employee).permit(:first_name, :last_name, :employee_id, :password, :warehouse_id, :is_manager)
 
   end
 
