@@ -4,11 +4,9 @@ class WarehousesController < ApplicationController
   end
 
   def create
-    @warehouse = Warehouse.new(warehouse_params)
-    @warehouse.location_code = "#{@warehouse.city}-#{rand(10000..99999).to_s}"
-    @warehouse.save
-    # FIX MEEEEEEEEEEEEEEEEEEEEEEE WITH THIS:
-    # render_template :view_to_go_to
+    warehouse = Warehouse.new(warehouse_params)
+    warehouse.location_code = "#{warehouse.city.upcase[0..2]}-#{rand(10000..99999).to_s}"
+    warehouse.save
     redirect_to 'root_path'
   end
 

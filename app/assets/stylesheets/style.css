@@ -1,46 +1,68 @@
 /* css document */
 
-/* login page styles */
+body {
+  font-family: sans-serif;
+}
+
+
+/* login-page styles */
 
 #login-page {
+  width: 100%;
+}
+
+.employee-login {
   width: 30%;
   margin: 0 auto;
   border: 1px solid gray;
+  border-radius: 25px;
   padding: 1.25em;
+}
+
+#mission-statement {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 5.45em;
+}
+
+label {
+  margin-bottom: .35em;
 }
 
 input {
-  display: block
+  font-size: 1.75em;
+  padding: .12em;
+  display: block;
+  margin-top: .75em;
+  margin-bottom: 1.45em;
+  border-radius: 20px;
+  border: 1px solid gray;
+  outline: none;
+}
+
+.login-button {
+  font-size: 1em;
+  background-color: #fff;
+  padding: .25em;
+  width: 145px;
+}
+
+.login-button:hover,
+.login-button:focus {
+  background-color: #0066cc;
+  transition: .3s;
+  color: #fff;
+}
+
+#mission-statement p {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.errors {
+  font-size: 1em;
+  font-weight: bold;
+  color: red;
 }
 
 /* end login page styles */
-
-/* homepage styles */
-#homepage {
-  width: 70%;
-  margin: 0 auto;
-  padding: 1.25em;
-}
-
-#homepage h1 {
-  font-size: 60px;
-}
-
-#homepage ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 200px;
-}
-
-#homepage li a {
-  display: block;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-/*#homepage li a:hover {
-  background-color: red;
-  color: white;
-}*/
-/* end homepage styles */
