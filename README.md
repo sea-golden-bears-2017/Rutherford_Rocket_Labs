@@ -1,5 +1,3 @@
-# README
-
 Team Name: Team-Martian-Huggers-Irregardless
 Members:
   * Eliza
