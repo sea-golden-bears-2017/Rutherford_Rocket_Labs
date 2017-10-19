@@ -1,7 +1,12 @@
 class EmployeesController < ApplicationController
 
   def new
-    @employee = Employee.new()
+    if manager_logged_in?
+      @employee = Employee.new()
+      render :new
+    else
+      redirect_to home_path
+    end
   end
 
   def create
