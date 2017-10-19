@@ -1,9 +1,9 @@
 <section id="warehouse-new-page">
-  <h1>NEW WAREHOUSE</h1>
+  <h1>New Warehouse</h1>
 
   <%= form_for :warehouse, url: warehouses_path do |f| %>
     City: <%= f.text_field :city %>
-    <%= f.submit %>
+    <%= f.submit class: 'submit-button' %>
   <% end %>
 
 </section>

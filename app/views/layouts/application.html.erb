@@ -12,7 +12,11 @@
   <body>
     <header>
       <div class="banner-logo">
-        <h1><%= link_to "Logo Placeholder", root_path %></h1>
+        <h1>
+          <a href="/home">
+            <%= image_tag "logo.jpg" %>
+          </a>
+        </h1>
       </div><!-- end banner logo -->
       <nav id="layout-header">
         <% if !logged_in? %>
