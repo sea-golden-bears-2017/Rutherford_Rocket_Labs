@@ -171,6 +171,25 @@ input {
 
 /* end homepage styles */
 
+/* new employee-page styles */
+
+#new-employee-page h2 {
+  margin-bottom: 1.2em;
+
+}
+
+#new-employee-page {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid gray;
+  border-radius: 25px;
+  padding: 1.25em;
+}
+
+new
+
+/* end new employee-page styles */
+
 /* footer styles */
 footer {
   position: absolute;
