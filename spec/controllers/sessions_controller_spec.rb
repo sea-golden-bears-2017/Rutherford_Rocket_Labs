@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe SessionsController, type: :controller do
   describe "POST /login a.k.a sessions#create" do
-      let!(:employee) { Employee.create(employee_id: 123, password: "password") }
+      let!(:employee) { Employee.create(employee_id: 123, password: "password", warehouse: Warehouse.create!(city: "New York")) }
     context "when employee enters correct login info" do
       it "responds with status code of 302" do
         post :create, { params: {employee_id: 123, password: "password"} }

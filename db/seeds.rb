@@ -5,11 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-Warehouse.destroy_all
-Employee.destroy_all
+# Part.destroy_all
+# Employee.destroy_all
+# Warehouse.destroy_all
 
 warehouse = Warehouse.create(city: "Seattle", location_code: "SEA-00000")
+Warehouse.create(city: "Denver", location_code: "DEN-00000")
+Warehouse.create(city: "Chicago", location_code: "CHI-00000")
+Warehouse.create(city: "Portland", location_code: "POR-00000")
 
 Employee.create(first_name: "Dr", last_name: "Rutherford", employee_id: 0000, password: "commissioner", is_manager: true, warehouse: warehouse)
 Employee.create(first_name: "Jules", last_name: "Dr", employee_id: 0001, password: "propulsion", is_manager: false, warehouse: warehouse)
+
+Part.create!(name: "o-ring", part_no: 35466, warehouse_id: 1, added_by_id: 2, removed: false)
+
+10.times { Part.create!(name: "beaker", part_no: 10001, warehouse_id: [1,2,3,4].sample, added_by_id: [1,2].sample, removed: false) }
+10.times { Part.create!(name: "thruster", part_no: 69021, warehouse_id: [1,2,3,4].sample, added_by_id: [1,2].sample, removed: false) }
+10.times { Part.create!(name: "fan", part_no: 86951, warehouse_id: [1,2,3,4].sample, added_by_id: [1,2].sample, removed: false) }
+10.times { Part.create!(name: "cooling unit", part_no: 35486, warehouse_id: [1,2,3,4].sample, added_by_id: [1,2].sample, removed: false) }

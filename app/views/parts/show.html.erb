@@ -1,0 +1,25 @@
+
+<section id = "part-show-page">
+
+<h3> <%= @parts[0].part_no %>: <%= @parts[0].name.capitalize %> </h3>
+  <table >
+    <thead>
+    <tr>
+      <th>Part Id</th>
+      <th>Part Number</th>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Remove</th>
+    </tr>
+    <% @parts.each do |part| %>
+      <tr>
+        <td><%=part.id%></td>
+        <td><%=part.part_no%></td>
+        <td><%= part.name.capitalize %></td>
+        <td><%= part.warehouse.location_code %></td>
+        <td><%= link_to "remove"%>  </td>
+      </tr>
+    <% end %>
+  </table>
+
+</section>
