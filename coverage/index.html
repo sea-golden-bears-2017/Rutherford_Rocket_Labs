@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-19T11:26:05-07:00">2017-10-19T11:26:05-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-19T11:29:00-07:00">2017-10-19T11:29:00-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">35.35%</span></span>
+    (<span class="covered_percent"><span class="red">50.54%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.49
+         0.92
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>13</b> files in total.
-    <b>99</b> relevant lines. 
-    <span class="green"><b>35</b> lines covered</span> and
-    <span class="red"><b>64</b> lines missed </span>
+    <b>93</b> relevant lines. 
+    <span class="green"><b>47</b> lines covered</span> and
+    <span class="red"><b>46</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -107,17 +107,17 @@
         <td>13</td>
         <td>11</td>
         <td>2</td>
-        <td>1.1</td>
+        <td>2.6</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#b4e0719667f7afcda78b31b96e04f59ba6031dd3" class="src_link" title="app/controllers/warehouses_controller.rb">app/controllers/warehouses_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
+        <td class="yellow strong">85.71 %</td>
         <td>24</td>
-        <td>20</td>
-        <td>0</td>
-        <td>20</td>
-        <td>0.0</td>
+        <td>14</td>
+        <td>12</td>
+        <td>2</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -127,7 +127,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>1.8</td>
+        <td>2.2</td>
       </tr>
       
       <tr>
@@ -189,20 +189,20 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     <span class="group_name">Controllers</span>
-    (<span class="covered_percent"><span class="red">27.54%</span></span>
+    (<span class="covered_percent"><span class="red">49.21%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.37
+         0.93
        </span>
     </span> hits/line)
   </h2>
   <a name="Controllers"></a>
   <div>
     <b>5</b> files in total.
-    <b>69</b> relevant lines. 
-    <span class="green"><b>19</b> lines covered</span> and
-    <span class="red"><b>50</b> lines missed </span>
+    <b>63</b> relevant lines. 
+    <span class="green"><b>31</b> lines covered</span> and
+    <span class="red"><b>32</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -255,17 +255,17 @@
         <td>13</td>
         <td>11</td>
         <td>2</td>
-        <td>1.1</td>
+        <td>2.6</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#b4e0719667f7afcda78b31b96e04f59ba6031dd3" class="src_link" title="app/controllers/warehouses_controller.rb">app/controllers/warehouses_controller.rb</a></td>
-        <td class="red strong">0.0 %</td>
+        <td class="yellow strong">85.71 %</td>
         <td>24</td>
-        <td>20</td>
-        <td>0</td>
-        <td>20</td>
-        <td>0.0</td>
+        <td>14</td>
+        <td>12</td>
+        <td>2</td>
+        <td>1.0</td>
       </tr>
       
     </tbody>
@@ -394,7 +394,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.8
+         2.2
        </span>
     </span> hits/line)
   </h2>
@@ -426,7 +426,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>1.8</td>
+        <td>2.2</td>
       </tr>
       
     </tbody>
@@ -1060,26 +1060,26 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="8">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="7" data-linenumber="8">
+          <span class="hits">7</span>
           
           <code class="ruby">    employee = Employee.find_by(employee_id: params[:employee_id])</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="9">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="7" data-linenumber="9">
+          <span class="hits">7</span>
           
           <code class="ruby">    if employee &amp;&amp; employee.authenticate(params[:password])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="10">
+          <span class="hits">3</span>
           
           <code class="ruby">      session[:user_id] = employee.id</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="11">
+          <span class="hits">3</span>
           
           <code class="ruby">      redirect_to &#39;/home&#39;</code>
         </li>
@@ -1090,14 +1090,14 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="4" data-linenumber="13">
+          <span class="hits">4</span>
           
           <code class="ruby">      @error = &#39;The employee number or password entered is incorrect.&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="4" data-linenumber="14">
+          <span class="hits">4</span>
           
           <code class="ruby">      render :login</code>
         </li>
@@ -1158,19 +1158,19 @@
         <div class="source_table" id="b4e0719667f7afcda78b31b96e04f59ba6031dd3">
   <div class="header">
     <h3>app/controllers/warehouses_controller.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
+    <h4><span class="yellow">85.71 %</span> covered</h4>
     <div>
-      <b>20</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>20</b> lines missed.</span>
+      <b>14</b> relevant lines. 
+      <span class="green"><b>12</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
   
   <pre>
     <ol>
       
-        <li class="missed" data-hits="0" data-linenumber="1">
-          
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
           
           <code class="ruby">class WarehousesController &lt; ApplicationController</code>
         </li>
@@ -1181,14 +1181,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="3">
-          
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
           
           <code class="ruby">  def new</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="4">
-          
+        <li class="covered" data-hits="2" data-linenumber="4">
+          <span class="hits">2</span>
           
           <code class="ruby">    if manager_logged_in?</code>
         </li>
@@ -1205,25 +1205,25 @@
           <code class="ruby">      render :new</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="8">
-          
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
           
           <code class="ruby">      redirect_to home_path</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">  end</code>
@@ -1235,37 +1235,37 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="12">
-          
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
           
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
-          
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
           
           <code class="ruby">    warehouse = Warehouse.new(warehouse_params)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
-          
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
           
           <code class="ruby">    warehouse.location_code = &quot;#{warehouse.city.upcase[0..2]}-#{rand(10000..99999).to_s}&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
-          
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
           
           <code class="ruby">    warehouse.save</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="16">
-          
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
           
           <code class="ruby">    redirect_to &#39;root_path&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">  end</code>
@@ -1277,25 +1277,25 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
-          
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
           
           <code class="ruby">  private</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
-          
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
           
           <code class="ruby">  def warehouse_params</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
-          
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
           
           <code class="ruby">    params.require(:warehouse).permit(:city)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">  end</code>
@@ -1307,7 +1307,7 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">end</code>
@@ -1344,8 +1344,8 @@
           <code class="ruby">  def logged_in?</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="3">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="10" data-linenumber="3">
+          <span class="hits">10</span>
           
           <code class="ruby">    return session[:user_id] != nil</code>
         </li>
@@ -1368,8 +1368,8 @@
           <code class="ruby">  def manager_logged_in?</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="7">
+          <span class="hits">3</span>
           
           <code class="ruby">    if logged_in?</code>
         </li>
