@@ -110,6 +110,14 @@ input {
 .logout:focus {
   color: lime;
 }
+
+#manager-nav li {
+  float: none;
+}
+#manager-nav a {
+  text-decoration: none;
+  color: black;
+}
 /* end application.html styles */
 
 /* homepage styles */
@@ -180,7 +188,6 @@ input {
 
 #new-employee-page h2 {
   margin-bottom: 1.2em;
-
 }
 
 #new-employee-page {
@@ -191,17 +198,11 @@ input {
   padding: 1.25em;
 }
 
-new
-
 /* end new employee-page styles */
 
 /* footer styles */
 footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
+  clear: both;
   text-align: center;
 }
 /* end footer styles */

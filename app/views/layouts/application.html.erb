@@ -31,6 +31,7 @@
             </li>
           </ul>
           <% if manager_logged_in? %>
+          <nav id="manager-nav">
             <ul>
               <li>
                 <%= link_to "Add Employee", new_employee_path %>
@@ -39,6 +40,7 @@
                 <%= link_to "Add Warehouse", new_warehouse_path %>
               </li>
             </ul>
+          </nav>
           <% end %>
         <% end %>
       </nav>
