@@ -27,4 +27,11 @@ ActiveRecord::Schema.define(version: 20171019001148) do
     t.index ["warehouse_id"], name: "index_employees_on_warehouse_id"
   end
 
+  create_table "warehouses", force: :cascade do |t|
+    t.string "city"
+    t.string "location_code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end
