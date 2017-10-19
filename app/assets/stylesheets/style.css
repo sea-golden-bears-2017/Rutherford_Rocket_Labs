@@ -221,15 +221,26 @@ input {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 100px;
 }
 #inventory-index-page table {
   text-align: left;
-  width: 40%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 100px;
 }
+#inventory-index-page td {
+  width: 300px;
+}
+#inventory-index-page th {
+  background-color: lime;
+}
+#inventory-index-page tr:nth-child(even) {
+  background-color: white;
+}
+#inventory-index-page tr:nth-child(odd) {
+  background-color: gainsboro;
+}
+
 #inventory-index-page h1 {
   text-align: center;
 }
@@ -239,7 +250,34 @@ input {
 
 
 /*end inventory table styles*/
-
+/* inventory show table styles*/
+#part-show-page {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#part-show-page h3 {
+  margin-left: 200px;
+}
+#part-show-page table {
+  text-align: left;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#part-show-page td {
+  width: 300px;
+}
+#part-show-page th {
+  background-color: lime;
+}
+#part-show-page tr:nth-child(even) {
+  background-color: white;
+}
+#part-show-page tr:nth-child(odd) {
+  background-color: gainsboro;
+}
+/* end inventory show table styles*/
 /* footer styles */
 footer {
   margin-top: 2.5em;
