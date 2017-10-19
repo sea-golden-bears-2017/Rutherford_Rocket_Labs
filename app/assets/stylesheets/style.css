@@ -68,20 +68,58 @@ input {
 
 /* end login page styles */
 
+/* application.html styles */
+
+#layout-header {
+  margin-top: 2.5em;
+  margin-right: 3.5em;
+  float: right;
+  overflow: hidden;
+}
+
+.banner-logo h1 {
+  float: left;
+  margin-top: 1.5em;
+  margin-left: 1.5em;
+}
+
+#layout-header li {
+  float: left;
+}
+
+#layout-header ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+.logout {
+  font-size: .9em;
+  border: none;
+  background-color: #fff;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.logout:hover,
+.logout:focus {
+  color: lime;
+}
+/* end application.html styles */
+
 /* homepage styles */
 #homepage {
   /*background-color: #806868;*/
   /*color: white;*/
   color: #806868;
   width: 100%;
-  height: 100vh;
-  position: absolute;
+  clear: both;
 }
 #homepage-container {
   width: 70%;
   margin: 0 auto;
   padding: 1.25em;
-  padding-top: 7em;
+  padding-top: 3em;
 }
 
 #homepage h1 {
@@ -93,7 +131,6 @@ input {
 }
 
 #main-nav {
-  background-color: slate;
   border-bottom: 2px solid #806868;
   border-top: 2px solid #806868;
   overflow: hidden;
@@ -133,3 +170,14 @@ input {
 }
 
 /* end homepage styles */
+
+/* footer styles */
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+/* end footer styles */
