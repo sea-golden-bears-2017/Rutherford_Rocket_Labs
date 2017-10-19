@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :employees, only: [:new, :create]
   resources :warehouses, only: [:new, :create]
-  resources :parts, only: [:index]
+  resources :parts, only: [:index, :show]
 
   root to: 'homes#show'
 
