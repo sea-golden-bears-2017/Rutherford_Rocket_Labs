@@ -1,4 +1,5 @@
 <section id="new-employee-page">
+  <h2>New Employee</h2>
 
   <% if defined? @errors %>
     <div class="errors">
@@ -21,7 +22,7 @@
     <%= f.label(:is_manager_employee, "Is an employee (not manager)")%>
     <%= f.radio_button(:is_manager, 'false') %>
 
-    <%= f.submit "Create Employee" %>
+    <%= f.submit "Create Employee", class: 'submit-button' %>
 
 
   <% end %>
