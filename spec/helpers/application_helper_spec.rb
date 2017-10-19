@@ -39,4 +39,17 @@ describe ApplicationHelper, type: :helper do
     end
   end
 
+  describe "employee_logged_in" do
+    let!(:warehouse) { Warehouse.create!(city: "Seattle", location_code: "SEA-001") }
+    let!(:employee) { Employee.create!(first_name: "jules", last_name: "whoknows", employee_id: 0001, password: "password", is_manager: false, warehouse: warehouse) }
+
+    it 'returns the employee logged in' do
+      session[:user_id] = employee.id
+      expect(employee_logged_in).to eq employee
+    end
+    it 'returns nil if no employee is logged in' do
+      expect(employee_logged_in).to be nil
+    end
+  end
+
 end

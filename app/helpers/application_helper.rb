@@ -13,6 +13,7 @@ module ApplicationHelper
   end
 
   def employee_logged_in
-    Employee.find(session[:user_id])
+    return Employee.find(session[:user_id]) if logged_in?
+    nil
   end
 end
