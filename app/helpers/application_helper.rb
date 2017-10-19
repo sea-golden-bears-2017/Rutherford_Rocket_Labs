@@ -7,4 +7,8 @@ module ApplicationHelper
     employee = Employee.find(session[:user_id])
     return employee.is_manager
   end
+
+  def employee_logged_in
+    Employee.find(session[:user_id])
+  end
 end

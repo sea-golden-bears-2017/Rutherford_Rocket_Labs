@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :warehouses, only: [:new, :create]
 
   root to: 'homes#show'
-  
+
   #homepage routes
   get "/home", to: "homes#show"
 

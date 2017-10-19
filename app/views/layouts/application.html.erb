@@ -10,6 +10,24 @@
   </head>
 
   <body>
+    <nav id="layout-header">
+      <% if !logged_in? %>
+        <ul>
+          <li>
+            <%= link_to "Login", root_path %>
+          </li>
+        </ul>
+      <% else %>
+      <ul>
+        <li>
+          Hello, <%= employee_logged_in.first_name %>
+        </li>
+        <li>
+          <%= button_to "Logout", {action: "destroy", controller: "sessions"}, method: :delete %>
+        </li>
+      </ul>
+      <% end %>
+    </nav>
     <%= yield %>
   </body>
 </html>
