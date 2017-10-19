@@ -39,10 +39,6 @@ describe Employee, type: :model do
   end
 
   describe "authenticate method" do
-<<<<<<< HEAD
-=======
-    let(:employee) { Employee.create(employee_id: 123, password: "password", warehouse: Warehouse.create!(city: "New York")) }
->>>>>>> master
     it "returns employee when password entered is correct" do
       expect(employee.authenticate("password")).to eq Employee.find_by(employee_id: 123)
     end
