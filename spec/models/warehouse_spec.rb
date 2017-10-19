@@ -11,4 +11,16 @@ RSpec.describe Warehouse, type: :model do
       expect(warehouse.location_id).to eq 1
     end
   end
+
+  context "Warehouse is created if:" do
+    it "has a name" do
+      expect(warehouse.city).to eq "Phoenix"
+    end
+    it "has a location_id" do
+      expect(warehouse.location_id).to eq 1
+    end
+  end
+
+
+
 end
