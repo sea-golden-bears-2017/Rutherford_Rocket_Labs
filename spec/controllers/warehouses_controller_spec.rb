@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe WarehousesController, type: :controller do
-  warehouse = Warehouse.create!(city: "Phoenix", location_id: 1)
+  warehouse = Warehouse.create!(city: "Phoenix", location_code: 1)
 
   context "GET #warehouse" do
     it "responds with status code 200" do

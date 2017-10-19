@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20171019001148) do
 
   create_table "warehouses", force: :cascade do |t|
     t.string "city"
-    t.integer "location_id"
+    t.string "location_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

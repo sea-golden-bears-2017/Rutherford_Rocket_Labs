@@ -1,14 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe Warehouse, type: :model do
-  warehouse = Warehouse.create!(city: "Phoenix", location_id: 1)
+  warehouse = Warehouse.create!(city: "Phoenix", location_code: "Phoenix-1")
 
   context 'Warehouse has:' do
     it "a city" do
       expect(warehouse.city).to eq "Phoenix"
     end
-    it "a location_id" do
-      expect(warehouse.location_id).to eq 1
+    it "a location_code" do
+      expect(warehouse.location_code).to eq "Phoenix-1"
     end
   end
 
@@ -16,8 +16,8 @@ RSpec.describe Warehouse, type: :model do
     it "has a name" do
       expect(warehouse.city).to eq "Phoenix"
     end
-    it "has a location_id" do
-      expect(warehouse.location_id).to eq 1
+    it "has a location_code" do
+      expect(warehouse.location_code).to eq "Phoenix-1"
     end
   end
 

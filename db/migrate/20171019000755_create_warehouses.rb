@@ -2,7 +2,7 @@ class CreateWarehouses < ActiveRecord::Migration[5.1]
   def change
     create_table :warehouses do |t|
       t.string :city
-      t.integer :location_id
+      t.string :location_code
 
       t.timestamps
     end
