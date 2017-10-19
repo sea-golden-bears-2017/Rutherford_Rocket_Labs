@@ -1,0 +1,28 @@
+<section id="new-employee-page">
+
+  <% if defined? @errors %>
+    <div class="errors">
+      <% @errors.each do |error| %>
+      <p><%= error %></p>
+    </div>
+      <% end %>
+  <% end %>
+  <%= form_for @employee, url: employees_path do |f| %>
+    <%= f.label :first_name%>
+    <%= f.text_field :first_name %>
+    <%= f.label :last_name%>
+    <%= f.text_field :last_name %>
+    <%= f.label 'Employee Id'%>
+    <%= f.text_field :employee_id %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= f.label(:is_manager, "Is a manager")%>
+    <%= f.radio_button(:is_manager, 'true') %>
+    <%= f.label(:is_manager_employee, "Is an employee (not manager)")%>
+    <%= f.radio_button(:is_manager, 'false') %>
+
+    <%= f.submit "Create Employee" %>
+
+
+  <% end %>
+</section>
