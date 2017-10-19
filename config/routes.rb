@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :employees, only: [:index, :new, :create]
+  resources :employees, only: [:new, :create]
 
   root :to => 'homes#show'
   
