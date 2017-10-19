@@ -3,6 +3,10 @@ class Part < ApplicationRecord
   belongs_to :remover, foreign_key: :removed_by_id, class_name: :Employee, optional: true
   belongs_to :adder, foreign_key: :added_by_id, class_name: :Employee
 
+  def self.all_of_type(part_no)
+    Part.where(part_no: part_no)
+  end
+
   def self.number_of(part_no, warehouse_id)
     Part.where(part_no: part_no, warehouse_id: warehouse_id).count
   end
