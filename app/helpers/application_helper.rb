@@ -4,7 +4,7 @@ module ApplicationHelper
   end
 
   def manager_logged_in?
-    user = User.find(session[:user_id])
-    return user.is_manager
+    employee = Employee.find(session[:user_id])
+    return employee.is_manager
   end
 end
