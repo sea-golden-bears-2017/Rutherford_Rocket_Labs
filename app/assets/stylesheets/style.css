@@ -215,6 +215,29 @@ input {
 
 /* end warehouse styles */
 
+/*inventory table styles*/
+
+#inventory-index-page {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#inventory-index-page table {
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#inventory-index-page h1 {
+  text-align: center;
+}
+#inventory-index-page h3 {
+  margin-left: 100px;
+}
+
+
+/*end inventory table styles*/
+
 /* footer styles */
 footer {
   margin-top: 2.5em;
