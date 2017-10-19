@@ -11,9 +11,14 @@ class WarehousesController < ApplicationController
 
   def create
     warehouse = Warehouse.new(warehouse_params)
-    warehouse.location_code = "#{warehouse.city.upcase[0..2]}-#{rand(10000..99999).to_s}"
-    warehouse.save
-    redirect_to 'root_path'
+    if warehouse.save
+      warehouse.location_code = "#{warehouse.city.upcase[0..2]}-#{rand(10000..99999).to_s}"
+      warehouse.save
+      redirect_to 'root_path'
+    else
+      @errors = warehouse.errors.full_messages
+      render :new
+    end
   end
 
   private
