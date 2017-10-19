@@ -33,7 +33,6 @@ gem 'font-awesome-sass', '~> 4.5.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'simplecov'
 
 
 group :development, :test do
@@ -46,6 +45,10 @@ group :development, :test do
   gem 'launchy'
   gem 'pry'
   gem 'factory_girl_rails'
+  gem 'simplecov', require: false
+  gem 'shoulda-matchers'
+  gem 'poltergeist'
+  gem 'database_cleaner'
 end
 
 group :development do

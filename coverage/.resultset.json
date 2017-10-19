@@ -1,17 +1,168 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/apprentice/team-martian-huggers-irregardless/Rutherford_Inventory/app/models/warehouse.rb": [
+      "/Users/blaineanderson/Coding/DevBootCamp/week-8/Rutherford_Rocket_Labs/app/helpers/application_helper.rb": [
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/blaineanderson/Coding/DevBootCamp/week-8/Rutherford_Rocket_Labs/app/controllers/homes_controller.rb": [
+        1,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/blaineanderson/Coding/DevBootCamp/week-8/Rutherford_Rocket_Labs/app/controllers/application_controller.rb": [
+        1,
         1,
         1,
         null
       ],
-      "/Users/apprentice/team-martian-huggers-irregardless/Rutherford_Inventory/app/models/application_record.rb": [
+      "/Users/blaineanderson/Coding/DevBootCamp/week-8/Rutherford_Rocket_Labs/app/controllers/sessions_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        5,
+        5,
+        0,
+        0,
+        null,
+        5,
+        5,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/blaineanderson/Coding/DevBootCamp/week-8/Rutherford_Rocket_Labs/app/controllers/warehouses_controller.rb": [
+        1,
+        null,
+        1,
+        2,
+        0,
+        0,
+        null,
+        2,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/blaineanderson/Coding/DevBootCamp/week-8/Rutherford_Rocket_Labs/app/models/warehouse.rb": [
         1,
         1,
         null
+      ],
+      "/Users/blaineanderson/Coding/DevBootCamp/week-8/Rutherford_Rocket_Labs/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/blaineanderson/Coding/DevBootCamp/week-8/Rutherford_Rocket_Labs/app/models/employee.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/blaineanderson/Coding/DevBootCamp/week-8/Rutherford_Rocket_Labs/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/blaineanderson/Coding/DevBootCamp/week-8/Rutherford_Rocket_Labs/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/blaineanderson/Coding/DevBootCamp/week-8/Rutherford_Rocket_Labs/app/controllers/employees_controller.rb": [
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0
+      ],
+      "/Users/blaineanderson/Coding/DevBootCamp/week-8/Rutherford_Rocket_Labs/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/blaineanderson/Coding/DevBootCamp/week-8/Rutherford_Rocket_Labs/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1508382257
+    "timestamp": 1508427513
   }
 }
