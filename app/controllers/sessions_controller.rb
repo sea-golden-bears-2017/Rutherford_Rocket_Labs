@@ -6,11 +6,12 @@ class SessionsController < ApplicationController
 
   def create
     employee = Employee.find_by(employee_id: params[:employee_id])
-    if employee
+    if employee && employee.authenticate(params[:password])
       session[:user_id] = employee.id
       redirect_to '/home'
     else
-      redirect_to '/login'
+      @error = 'The employee number or password entered is incorrect.'
+      render :login
     end
   end
 

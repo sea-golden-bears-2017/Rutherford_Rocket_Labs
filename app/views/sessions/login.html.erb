@@ -1,8 +1,13 @@
-<section id="login-page">  
+<section id="login-page">
   <h1>Login</h1>
 
+  <% if defined? @error %>
+  <div class="errors">
+    <p><%= @error %></p>
+  </div>
+  <% end %>
   <%= form_tag login_path, method: :post%>
   Employee Number: <%= text_field_tag :employee_id %>
   Password: <%= password_field_tag :password %>
   <%= submit_tag 'Login' %>
-</section>
+</section><!-- end login page -->
