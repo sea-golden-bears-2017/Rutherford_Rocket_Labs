@@ -1,7 +1,6 @@
 <h1>NEW WAREHOUSE</h1>
 
-<%= form_for :warehouse do |f| %>
-
+<%= form_for :warehouse, url: warehouses_path do |f| %>
   City: <%= f.text_field :city %>
   <%= f.submit %>
 <% end %>
