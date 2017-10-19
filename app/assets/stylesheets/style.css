@@ -10,6 +10,10 @@ section {
   clear: both;
 }
 
+img {
+  width: 40%;
+}
+
 /* login-page styles */
 
 #login-page {
@@ -199,6 +203,18 @@ input {
 }
 
 /* end new employee-page styles */
+
+/* warehouse styles */
+
+#warehouse-new-page {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid gray;
+  border-radius: 25px;
+  padding: 1.25em;
+}
+
+/* end warehouse styles */
 
 /* footer styles */
 footer {
