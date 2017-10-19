@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171019001148) do
+ActiveRecord::Schema.define(version: 20171019183937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,18 @@ ActiveRecord::Schema.define(version: 20171019001148) do
     t.index ["warehouse_id"], name: "index_employees_on_warehouse_id"
   end
 
+  create_table "parts", force: :cascade do |t|
+    t.integer "part_no"
+    t.string "name"
+    t.bigint "warehouse_id"
+    t.integer "removed_by_id"
+    t.integer "added_by_id"
+    t.boolean "removed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["warehouse_id"], name: "index_parts_on_warehouse_id"
+  end
+
   create_table "warehouses", force: :cascade do |t|
     t.string "city"
     t.string "location_code"
@@ -34,4 +46,5 @@ ActiveRecord::Schema.define(version: 20171019001148) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "parts", "warehouses"
 end
