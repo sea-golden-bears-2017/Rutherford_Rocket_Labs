@@ -1,0 +1,18 @@
+<section id="new-employee-page">
+  <%= form_for @employee, url: employees_path do |f| %>
+    <%= f.label :first_name%>
+    <%= f.text_field :first_name %>
+    <%= f.label :last_name%>
+    <%= f.text_field :last_name %>
+    <%= f.label :employee_id%>
+    <%= f.text_field :employee_id %>
+    <%= f.label(:is_manager, "Is a manager")%>
+    <%= f.radio_button(:is_manager, "manager") %>
+    <%= f.label(:is_manager_employee, "Is an employee (not manager)")%>
+    <%= f.radio_button(:is_manager, "employee") %>
+
+    <%= f.submit "Create Employee" %>
+
+
+  <% end %>
+</section>
