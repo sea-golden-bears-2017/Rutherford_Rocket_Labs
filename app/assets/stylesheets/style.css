@@ -66,33 +66,3 @@ input {
 }
 
 /* end login page styles */
-
-/* homepage styles */
-#homepage {
-  width: 70%;
-  margin: 0 auto;
-  padding: 1.25em;
-}
-
-#homepage h1 {
-  font-size: 60px;
-}
-
-#homepage ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 200px;
-}
-
-#homepage li a {
-  display: block;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-/*#homepage li a:hover {
-  background-color: red;
-  color: white;
-}*/
-/* end homepage styles */
