@@ -180,7 +180,6 @@ input {
 
 #new-employee-page h2 {
   margin-bottom: 1.2em;
-
 }
 
 #new-employee-page {
@@ -191,17 +190,16 @@ input {
   padding: 1.25em;
 }
 
-new
+#new-employee-page input {
+  margin-top: .25em;
+}
 
 /* end new employee-page styles */
 
 /* footer styles */
 footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
+  margin-top: 2.5em;
   text-align: center;
+  clear: both;
 }
 /* end footer styles */
