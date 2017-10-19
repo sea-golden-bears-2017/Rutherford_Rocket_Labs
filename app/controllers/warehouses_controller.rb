@@ -5,7 +5,7 @@ class WarehousesController < ApplicationController
 
   def create
     p params
-    warehouse = Warehouse.new(params[:city])
+    warehouse = Warehouse.new(warehouse_params)
     warehouse.location_id = SecureRandom.hex(13)
     p warehouse
     warehouse.save
@@ -16,7 +16,7 @@ class WarehousesController < ApplicationController
 
   private
   def warehouse_params
-    
+    params.require(:warehouse).permit(:city)
   end
 
 end
