@@ -202,7 +202,8 @@ input {
 
 /* footer styles */
 footer {
-  clear: both;
+  margin-top: 2.5em;
   text-align: center;
+  clear: both;
 }
 /* end footer styles */

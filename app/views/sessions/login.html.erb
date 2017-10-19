@@ -2,6 +2,7 @@
 
 <section id="login-page">
   <aside class="employee-login">
+    <h1>Welcome to Rutherford Rocket Labs</h1>
       <h2>Login</h2>
     <% if defined? @error %>
     <div class="errors">
@@ -11,7 +12,7 @@
     <%= form_tag login_path, method: :post%>
     Employee Number: <%= text_field_tag :employee_id %>
     Password: <%= password_field_tag :password %>
-    <%= submit_tag 'login', class: 'login-button' %>
+    <%= submit_tag 'login', class: 'submit-button' %>
   </aside><!-- end employee login -->
   <aside id="mission-statement">
     <h3>Mission Statement</h3>
