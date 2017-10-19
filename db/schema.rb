@@ -10,16 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171019000755) do
+=======
+ActiveRecord::Schema.define(version: 20171019001148) do
+>>>>>>> 0efa9d975a3eb52b5e9a98c4b89d7a4bea427c1f
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "warehouses", force: :cascade do |t|
     t.string "city"
     t.integer "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+=======
+  create_table "employees", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.integer "employee_id"
+    t.string "password_digest"
+    t.boolean "is_manager"
+    t.bigint "warehouse_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["warehouse_id"], name: "index_employees_on_warehouse_id"
+>>>>>>> 0efa9d975a3eb52b5e9a98c4b89d7a4bea427c1f
   end
 
 end
