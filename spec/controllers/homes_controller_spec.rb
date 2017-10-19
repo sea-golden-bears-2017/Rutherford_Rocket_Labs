@@ -19,12 +19,9 @@ describe HomesController, type: :controller do
         get :home
         expect(response.status).to eq 302
       end
-      xit 'redirects to login url' do
+      it 'redirects to login url' do
         get :home
         expect(response).to redirect_to(login_path)
-      end
-      xit 'shows the login page' do
-        expect(get :home).to render_template(:login)
       end
     end
   end
