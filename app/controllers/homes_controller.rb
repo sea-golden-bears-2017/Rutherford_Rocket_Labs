@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
-  def home
+  def show
     if logged_in?
       render :home
     else
