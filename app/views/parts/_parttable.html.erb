@@ -1,0 +1,19 @@
+
+
+  <table style="width: 800px; text-align: center;">
+    <thead>
+    <tr>
+      <th>Part Number</th>
+      <th>Name</th>
+      <th>Count</th>
+      <th>View</th>
+    </tr>
+    <% parts.each do |part| %>
+    <tr>
+      <td><%=part.part_no%></td>
+      <td><%= part.name %></td>
+      <td><%= Part.number_of(part.part_no, warehouse.id) %></td>
+    </tr>
+
+    <% end %>
+  </table>
