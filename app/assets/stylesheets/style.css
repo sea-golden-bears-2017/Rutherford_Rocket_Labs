@@ -203,10 +203,10 @@ input {
   clear: both;
 }
 #homepage-container {
-  width: 70%;
   margin: 0 auto;
   padding: 1.25em;
   padding-top: 3em;
+  width: 50%;
 }
 
 #homepage h1 {
@@ -224,7 +224,6 @@ input {
   border-bottom: 2px solid #000;
   border-top: 2px solid #000;
   overflow: hidden;
-  width: 62%;
 }
 
 #main-nav ul {
@@ -255,7 +254,6 @@ input {
 
 #homepage p {
   text-align: justify;
-  width: 62%;
   line-height: 1.3em;
   font-family: 'Slabo 27px', serif;
 }
