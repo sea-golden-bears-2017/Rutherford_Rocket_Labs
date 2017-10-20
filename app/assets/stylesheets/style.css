@@ -46,6 +46,8 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: absolute;
+  z-index: -100;
 }
 
 #login-page h1, h2, h3 {
@@ -74,7 +76,7 @@ img {
 }
 
 .employee-login {
-  width: 30%;
+  width: 400px;
   margin-top: 4.5em;
   margin: 0 auto;
   border: 1px solid #fff;
@@ -317,6 +319,7 @@ input {
 #inventory-index-page th {
   background-color: lime;
 }
+
 #inventory-index-page tr {
   height: 25px;
   font-size: 1.2em;
@@ -332,6 +335,7 @@ input {
   text-align: center;
 }
 #inventory-index-page h3 {
+  color: #000;
   margin-left: 200px;
 }
 
@@ -344,6 +348,7 @@ input {
   margin-right: auto;
 }
 #part-show-page h3 {
+  color: #000;
   margin-left: 200px;
 }
 #part-show-page table {
