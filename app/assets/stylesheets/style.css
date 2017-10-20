@@ -1,5 +1,10 @@
 /* css document */
 
+body, body * {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: sans-serif;
   height: 100%;
@@ -11,27 +16,100 @@ section {
 }
 
 img {
-  width: 20%;
+  padding-top: .65em;
+  padding-left: .55em;
+  width: 100%;
+  text-align: left;
 }
 
 /* login-page styles */
 
+#main-logo {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.45em;
+  position: fixed;
+}
+
+#welcome span {
+   color: #c62128;
+}
+
+#main-logo a {
+  text-decoration: none;
+  color: #000;
+}
+
 #login-page {
   width: 100%;
+  background-image: url(launch2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  z-index: -100;
+}
+
+#login-page h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+#login-page nav {
+  display: none;
+}
+
+#login-page h1 {
+  padding-bottom: 1.5em;
+}
+
+#login-page h2 {
+  padding-bottom: 1.5em;
+}
+
+#welcome {
+  padding-top: 3em;
+  font-size: 3em;
+  text-align: center;
+  color: #babec4;
 }
 
 .employee-login {
-  width: 30%;
+  width: 400px;
+  margin-top: 4.5em;
   margin: 0 auto;
-  border: 1px solid gray;
-  border-radius: 25px;
+  border: 1px solid #fff;
   padding: 1.25em;
+}
+
+.employee-login h2 {
+  color: #fff;
 }
 
 #mission-statement {
   width: 50%;
   margin: 0 auto;
   margin-top: 5.45em;
+}
+
+#login-page h3 {
+  text-align: center;
+  letter-spacing: 5px;
+  padding-bottom: 1.2em;
+}
+
+#mission-statement p {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-family: 'Slabo 27px', serif;
+  color: #fff;
+  padding-bottom: 2.5em;
+}
+
+form {
+  font-family: 'Slabo 27px', serif;
+  color: #fff;
 }
 
 label {
@@ -44,12 +122,14 @@ input {
   display: block;
   margin-top: .35em;
   margin-bottom: .65em;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid gray;
   outline: none;
 }
 
 .submit-button {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
   font-size: 1em;
   background-color: #fff;
   padding: .25em;
@@ -58,17 +138,17 @@ input {
 
 .submit-button:hover,
 .submit-button:focus {
-  background-color: #0066cc;
+  background-color: #c62128;
   transition: .3s;
   color: #fff;
 }
 
-#mission-statement p {
-  font-size: 1.5em;
-  line-height: 1.5em;
-}
-
 .errors {
+  font-size: 1em;
+  font-weight: bold;
+  color: red;
+}
+.errors p {
   font-size: 1em;
   font-weight: bold;
   color: red;
@@ -86,9 +166,7 @@ input {
 }
 
 .banner-logo h1 {
-  float: left;
-  margin-top: 1.5em;
-  margin-left: 1.5em;
+  /*width: 100%;*/
 }
 
 #layout-header li {
@@ -125,32 +203,32 @@ input {
 
 /* homepage styles */
 #homepage {
-  /*background-color: #806868;*/
-  /*color: white;*/
-  color: #806868;
+  color: #000;
   width: 100%;
   clear: both;
 }
 #homepage-container {
-  width: 70%;
   margin: 0 auto;
   padding: 1.25em;
   padding-top: 3em;
+  width: 50%;
 }
 
 #homepage h1 {
   font-size: 55px;
+  padding-bottom: .75em;
 }
 
 #homepage h2 {
   font-size: 35px;
+  padding-top: .75em;
+  padding-bottom: .75em;
 }
 
 #main-nav {
-  border-bottom: 2px solid #806868;
-  border-top: 2px solid #806868;
+  border-bottom: 2px solid #000;
+  border-top: 2px solid #000;
   overflow: hidden;
-  width: 90%;
 }
 
 #main-nav ul {
@@ -167,8 +245,7 @@ input {
 }
 
 #main-nav a {
-  /*color: white;*/
-  color: #806868;
+  color: #000;
   display: block;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -176,41 +253,51 @@ input {
 }
 
 #main-nav a:hover {
-  background-color: #806868;
+  background-color: #c62128;
   color: white;
 }
 
 #homepage p {
   text-align: justify;
-  width: 90%;
+  line-height: 1.3em;
+  font-family: 'Slabo 27px', serif;
 }
 
 /* end homepage styles */
 
 /* new employee-page styles */
 
+
 #new-employee-page h2 {
   margin-bottom: 1.2em;
+}
+
+#new-employee-page h1, h2, h3, label {
+  color: #000;
 }
 
 #new-employee-page {
   width: 50%;
   margin: 0 auto;
-  border: 1px solid gray;
   border-radius: 25px;
   padding: 1.25em;
+  color: #000;
 }
 
 /* end new employee-page styles */
 
 /* warehouse styles */
 
-#warehouse-new-page {
+
+#warehouse-new-page h1, h2, h3, label {
+  color: #000;
+}
+
+#warehouse-new-page form {
   width: 50%;
+  padding-top: 10.5em;
   margin: 0 auto;
-  border: 1px solid gray;
   border-radius: 25px;
-  padding: 1.25em;
 }
 
 #warehouse-show {
@@ -250,6 +337,7 @@ input {
 #inventory-index-page th {
   background-color: lime;
 }
+
 #inventory-index-page tr {
   height: 25px;
   font-size: 1.2em;
@@ -265,6 +353,7 @@ input {
   text-align: center;
 }
 #inventory-index-page h3 {
+  color: #000;
   margin-left: 200px;
 }
 
@@ -277,6 +366,7 @@ input {
   margin-right: auto;
 }
 #part-show-page h3 {
+  color: #000;
   margin-left: 200px;
 }
 #part-show-page table {
@@ -304,8 +394,13 @@ input {
 /* end inventory show table styles*/
 /* footer styles */
 footer {
-  margin-top: 2.5em;
+  background-color: #35383d;
+  padding: 4em;
+  margin-top: 2em;
+  color: #fff;
   text-align: center;
   clear: both;
+  font-family: 'Slabo 27px', serif;
+  font-size: .9em;
 }
 /* end footer styles */

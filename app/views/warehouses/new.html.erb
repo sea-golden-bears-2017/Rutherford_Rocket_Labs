@@ -1,16 +1,17 @@
 <section id="warehouse-new-page">
+
+  <%= form_for :warehouse, url: warehouses_path do |f| %>
   <h1>New Warehouse</h1>
 
   <% if defined? @errors %>
-    <div class="errors">
-      <% @errors.each do |error| %>
-      <p><%= error %></p>
-    </div>
-      <% end %>
+  <div class="errors">
+    <% @errors.each do |error| %>
+    <p><%= error %></p>
+  </div>
   <% end %>
-  
-  <%= form_for :warehouse, url: warehouses_path do |f| %>
-    City: <%= f.text_field :city %>
+  <% end %>
+    <%= f.label :city%>
+    <%= f.text_field :city %>
     <%= f.submit class: 'submit-button' %>
   <% end %>
 
