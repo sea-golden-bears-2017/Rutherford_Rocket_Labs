@@ -1,4 +1,6 @@
 <section id="new-employee-page">
+
+  <%= form_for @employee, url: employees_path do |f| %>
   <h2>New Employee</h2>
 
   <% if defined? @errors %>
@@ -8,7 +10,6 @@
     </div>
       <% end %>
   <% end %>
-  <%= form_for @employee, url: employees_path do |f| %>
     <%= f.label :first_name%>
     <%= f.text_field :first_name %>
     <%= f.label :last_name%>

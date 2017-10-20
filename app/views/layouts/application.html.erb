@@ -20,14 +20,8 @@
           </a>
         </h1>
       </div><!-- end banner logo -->
-      <% unless current_page?(login_path) %>
       <nav id="layout-header">
         <% if !logged_in? %>
-        <!-- <ul>
-          <li>
-            <%= link_to "Login", root_path %>
-          </li>
-        </ul> -->
         <% else %>
           <ul>
             <li>
@@ -49,9 +43,8 @@
             </ul>
           </nav>
           <% end %>
-        <% end %><!-- end unless -->
       </nav>
-      <% end %>
+        <% end %>
     </header>
     <%= yield %>
     <!-- <footer> -->
