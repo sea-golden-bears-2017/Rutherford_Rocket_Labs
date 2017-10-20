@@ -148,6 +148,11 @@ input {
   font-weight: bold;
   color: red;
 }
+.errors p {
+  font-size: 1em;
+  font-weight: bold;
+  color: red;
+}
 
 /* end login page styles */
 
