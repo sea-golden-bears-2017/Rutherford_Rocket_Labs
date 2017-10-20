@@ -1,8 +1,8 @@
 
 <section id = "part-show-page">
-
-<h1> <%= @part %> </h1>
-  <table style="width: 800px; text-align: center;">
+<%= link_to "Back", parts_url %>
+<h3> <%= @parts[0].part_no %>: <%= @parts[0].name.capitalize %> </h3>
+  <table >
     <thead>
     <tr>
       <th>Part Id</th>
@@ -17,7 +17,7 @@
         <td><%=part.part_no%></td>
         <td><%= part.name.capitalize %></td>
         <td><%= part.warehouse.location_code %></td>
-        <td> <%= link_to "remove"%>  </td>
+        <td><%= link_to "remove"%>  </td>
       </tr>
     <% end %>
   </table>
