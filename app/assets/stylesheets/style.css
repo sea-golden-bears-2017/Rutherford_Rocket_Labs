@@ -1,5 +1,10 @@
 /* css document */
 
+body, body * {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: sans-serif;
   height: 100%;
@@ -11,20 +16,68 @@ section {
 }
 
 img {
+  padding-top: .65em;
+  padding-left: .55em;
   width: 20%;
+  text-align: left;
 }
 
 /* login-page styles */
 
+#main-logo {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.45em;
+  position: fixed;
+}
+
+#welcome span {
+   color: #c62128;
+}
+
+#main-logo a {
+  text-decoration: none;
+  color: #000;
+}
+
 #login-page {
   width: 100%;
+  background-image: url(launch2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#login-page h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+#login-page nav {
+  display: none;
+}
+
+#login-page h1 {
+  padding-bottom: 1.5em;
+}
+
+#login-page h2 {
+  padding-bottom: 1.5em;
+}
+
+#welcome {
+  padding-top: 3em;
+  font-size: 3em;
+  text-align: center;
+  color: #babec4;
 }
 
 .employee-login {
   width: 30%;
+  margin-top: 4.5em;
   margin: 0 auto;
-  border: 1px solid gray;
-  border-radius: 25px;
+  border: 1px solid #fff;
   padding: 1.25em;
 }
 
@@ -32,6 +85,25 @@ img {
   width: 50%;
   margin: 0 auto;
   margin-top: 5.45em;
+}
+
+#login-page h3 {
+  text-align: center;
+  letter-spacing: 5px;
+  padding-bottom: 1.2em;
+}
+
+#mission-statement p {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-family: 'Slabo 27px', serif;
+  color: #fff;
+  padding-bottom: 2.5em;
+}
+
+form {
+  font-family: 'Slabo 27px', serif;
+  color: #fff;
 }
 
 label {
@@ -44,12 +116,14 @@ input {
   display: block;
   margin-top: .35em;
   margin-bottom: .65em;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid gray;
   outline: none;
 }
 
 .submit-button {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
   font-size: 1em;
   background-color: #fff;
   padding: .25em;
@@ -58,14 +132,9 @@ input {
 
 .submit-button:hover,
 .submit-button:focus {
-  background-color: #0066cc;
+  background-color: #c62128;
   transition: .3s;
   color: #fff;
-}
-
-#mission-statement p {
-  font-size: 1.5em;
-  line-height: 1.5em;
 }
 
 .errors {
@@ -86,9 +155,7 @@ input {
 }
 
 .banner-logo h1 {
-  float: left;
-  margin-top: 1.5em;
-  margin-left: 1.5em;
+  width: 100%;
 }
 
 #layout-header li {
@@ -304,8 +371,13 @@ input {
 /* end inventory show table styles*/
 /* footer styles */
 footer {
-  margin-top: 2.5em;
+  background-color: #35383d;
+  padding: 4em;
+  margin-top: 2em;
+  color: #fff;
   text-align: center;
   clear: both;
+  font-family: 'Slabo 27px', serif;
+  font-size: .9em;
 }
 /* end footer styles */
