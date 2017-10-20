@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20171020182127) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.string "name"
+    t.string "description"
     t.bigint "warehouse_id"
     t.integer "manager_id"
     t.datetime "created_at", null: false
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20171020182127) do
     t.string "name"
     t.bigint "warehouse_id"
     t.integer "removed_by_id"
-    t.integer "added_by_id"
+    t.integer "received_by_id"
     t.boolean "removed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
