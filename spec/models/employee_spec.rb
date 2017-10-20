@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 describe Employee, type: :model do
-  let!(:employee) { Employee.create!( first_name: "Factory", last_name: "Girl", employee_id: 123, password: "password", is_manager: true, warehouse_id: 5) }
+  let!(:warehouse) { Warehouse.create!(city: "Denver") }
+  let!(:employee) { Employee.create!( first_name: "Factory", last_name: "Girl", employee_id: 123, password: "password", is_manager: true, warehouse: warehouse) }
 
   describe "validations" do
     it "is invalid when a first name is not entered" do
@@ -34,7 +35,7 @@ describe Employee, type: :model do
     end
 
     it "is invalid if employee doesn't have a warehouse id" do
-      expect(employee.warehouse_id).to eq 5
+      expect(employee.warehouse_id).to eq warehouse.id
     end
   end
 
