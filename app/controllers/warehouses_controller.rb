@@ -18,7 +18,7 @@ class WarehousesController < ApplicationController
     if warehouse.save
       warehouse.location_code = "#{warehouse.city.upcase[0..2]}-#{rand(10000..99999).to_s}"
       warehouse.save
-      redirect_to root_path
+      redirect_to warehouse_path(warehouse)
     else
       @errors = warehouse.errors.full_messages
       render :new
