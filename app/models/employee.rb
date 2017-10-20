@@ -8,5 +8,5 @@ class Employee < ApplicationRecord
   has_many :removed_parts, foreign_key: :removed_by_id, class_name: :Part
   has_many :received_parts, foreign_key: :received_by_id, class_name: :Part
 
-  has_many :orders, foreign_key: :manager_id
+  has_many :orders
 end

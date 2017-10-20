@@ -30,9 +30,10 @@ ActiveRecord::Schema.define(version: 20171020182127) do
   create_table "orders", force: :cascade do |t|
     t.string "description"
     t.bigint "warehouse_id"
-    t.integer "manager_id"
+    t.bigint "employee_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["employee_id"], name: "index_orders_on_employee_id"
     t.index ["warehouse_id"], name: "index_orders_on_warehouse_id"
   end
 

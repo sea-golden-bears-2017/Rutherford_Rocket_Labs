@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 describe Order, type: :model do
-  let!(:warehouse) { create(:warehouse) }
-  let!(:manager) { create(:manager, warehouse: warehouse) }
-  let(:order) { create(:order, warehouse: warehouse, manager: manager) }
+  let!(:warehouse)  { Warehouse.create!(city: "Denver", location_code: "DEN-00002") }
+  let!(:employee) { create(:employee, is_manager: true,  warehouse: warehouse) }
+  let(:order) { Order.create(description:  "my rocket order", warehouse: warehouse, employee: employee) }
   let(:parts) { create_list(:part, 3, warehouse: warehouse, order: order) }
   let(:parts2) { create_list(:part, 3, part_no: 11111, name: "generic tool", warehouse: warehouse, order: order) }
   let(:parts_array) {parts + parts2}
@@ -17,11 +17,19 @@ describe Order, type: :model do
     it "belongs to a warehouse" do
       expect(order.warehouse).to eq warehouse
     end
-    it "belongs to the manager that created it" do
-      expect(order.manager).to eq manager
+    it "belongs to the employee that created it" do
+      expect(order.employee).to eq employee
     end
     it "has many parts" do
       expect(order.parts).to match parts_array
+    end
+    it 'employee has many orders' do
+      order1 = order
+      expect(employee.orders).to include order1
+    end
+    it 'part belongs to an order' do
+      order1 = order
+      expect(parts.first.order).to eq order1
     end
   end
 end
