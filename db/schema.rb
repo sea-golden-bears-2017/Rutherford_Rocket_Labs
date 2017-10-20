@@ -43,8 +43,10 @@ ActiveRecord::Schema.define(version: 20171020182127) do
     t.integer "removed_by_id"
     t.integer "received_by_id"
     t.boolean "removed"
+    t.bigint "order_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_parts_on_order_id"
     t.index ["warehouse_id"], name: "index_parts_on_warehouse_id"
   end
 
