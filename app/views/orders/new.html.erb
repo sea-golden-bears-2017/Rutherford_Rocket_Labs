@@ -9,9 +9,9 @@
     </div>
       <% end %>
   <% end %>
-    <%= f.label 'Order Name' %>
+    <%= f.label :name %>
     <%= f.text_field :name %>
-    <%= f.label 'Order Description' %>
+    <%= f.label :description %>
     <%= f.text_field :description %>
     <%= f.label :warehouse %>
     <%= f.select(:warehouse_id) do %>
@@ -19,29 +19,47 @@
       <%= content_tag(:option, w.location_code, value: w.id) %>
       <% end %>
     <% end %>
-
-
     <%= f.label 'Part Number' %>
-    <%= f.select("part_no[1]") do %>
-      <% Part.select(:part_no).map(&:part_no).uniq.each do |p| %>
+    <%= f.select("part_id[1]") do %>
+      <% Part.all.map(&:part_no).uniq.each do |p| %>
       <%= content_tag(:option, p, value: p) %>
       <% end %>
     <% end %>
-
     <%= f.label 'Quantity' %>
     <%= f.text_field "quantity[1]", class: 'part-quantity' %>
-
     <%= f.label 'Part Number' %>
-    <%= f.select("part_no[2]") do %>
-      <% Part.select(:part_no).map(&:part_no).uniq.each do |p| %>
+    <%= f.select("part_id[2]") do %>
+      <% Part.all.map(&:part_no).uniq.each do |p| %>
       <%= content_tag(:option, p, value: p) %>
       <% end %>
     <% end %>
-
     <%= f.label 'Quantity' %>
     <%= f.text_field "quantity[2]", class: 'part-quantity' %>
-
-    <!-- <%= f.submit 'Add Another Part', class: 'submit-button' %> -->
+    <%= f.label 'Part Number' %>
+    <%= f.select("part_id[3]") do %>
+      <% Part.all.map(&:part_no).uniq.each do |p| %>
+      <%= content_tag(:option, p, value: p) %>
+      <% end %>
+    <% end %>
+    <%= f.label 'Quantity' %>
+    <%= f.text_field "quantity[3]", class: 'part-quantity' %>
+    <%= f.label 'Part Number' %>
+    <%= f.select("part_id[4]") do %>
+      <% Part.all.map(&:part_no).uniq.each do |p| %>
+      <%= content_tag(:option, p, value: p) %>
+      <% end %>
+    <% end %>
+    <%= f.label 'Quantity' %>
+    <%= f.text_field "quantity[4]", class: 'part-quantity' %>
+    <%= f.label 'Part Number' %>
+    <%= f.select("part_id[5]") do %>
+      <% Part.all.map(&:part_no).uniq.each do |p| %>
+      <%= content_tag(:option, p, value: p) %>
+      <% end %>
+    <% end %>
+    <%= f.label 'Quantity' %>
+    <%= f.text_field "quantity[5]", class: 'part-quantity' %>
+    <%= f.submit 'Add Another Part', class: 'submit-button' %>
     <%= f.submit 'Place Order', class: 'submit-button send-order' %>
   <% end %>
 </section><!-- end new order page -->

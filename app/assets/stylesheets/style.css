@@ -189,7 +189,7 @@ input {
 
 .logout:hover,
 .logout:focus {
-  color: lime;
+  color: #c62128;
 }
 
 #manager-nav li {
@@ -260,8 +260,8 @@ font-family: 'Slabo 27px', serif;
 }
 
 #main-nav-manager a:hover {
-  background-color: lime;
-  color: black;
+  background-color: #c62128;
+  color: white;
 }
 /* end employee nav */
 
