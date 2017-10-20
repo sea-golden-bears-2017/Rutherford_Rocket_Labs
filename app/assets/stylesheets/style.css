@@ -225,26 +225,33 @@ input {
   padding-bottom: .75em;
 }
 
-#main-nav {
+#homepage p {
+text-align: justify;
+line-height: 1.3em;
+font-family: 'Slabo 27px', serif;
+}
+
+    /* begin employee nav */
+#main-nav-manager {
   border-bottom: 2px solid #000;
   border-top: 2px solid #000;
   overflow: hidden;
 }
 
-#main-nav ul {
-  margin: 0;
+#main-nav-manager ul {
+  margin-left: 35px;
   list-style-type: none;
 }
 
-#main-nav li {
+#main-nav-manager li {
   display: block;
   float: left;
   text-align: center;
   font-size: 20px;
-  width: 48%;
+  width: 32%;
 }
 
-#main-nav a {
+#main-nav-manager a {
   color: #000;
   display: block;
   padding-top: 10px;
@@ -252,16 +259,45 @@ input {
   text-decoration: none;
 }
 
-#main-nav a:hover {
-  background-color: #c62128;
-  color: white;
+#main-nav-manager a:hover {
+  background-color: lime;
+  color: black;
+}
+/* end employee nav */
+
+/* begin manager nav */
+#main-nav-employee {
+border-bottom: 2px solid #000;
+border-top: 2px solid #000;
+overflow: hidden;
 }
 
-#homepage p {
-  text-align: justify;
-  line-height: 1.3em;
-  font-family: 'Slabo 27px', serif;
+#main-nav-employee ul {
+margin-left: 35px;
+list-style-type: none;
 }
+
+#main-nav-employee li {
+display: block;
+float: left;
+text-align: center;
+font-size: 20px;
+width: 48%;
+}
+
+#main-nav-employee a {
+color: #000;
+display: block;
+padding-top: 10px;
+padding-bottom: 10px;
+text-decoration: none;
+}
+
+#main-nav-employee a:hover {
+background-color: #c62128;
+color: white;
+}
+/* end manager nav */
 
 /* end homepage styles */
 
