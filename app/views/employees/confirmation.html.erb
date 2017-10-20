@@ -1,0 +1,16 @@
+<section id="employee-confirm">
+  <table>
+    <p class="success">You've successfully created a new employee</p>
+    <tr>
+      <th>Name: </th>
+      <td> <%= @employee.first_name + " " + @employee.last_name %> </td>
+    </tr>
+    <tr>
+      <th>Employee ID: </th>
+      <td> <%= @employee.employee_id %> </td>
+    </tr>
+  </table>
+  <% if @employee.is_manager %>
+  <p>This employee is granted manager access to this site.</p>
+  <% end %>
+</section>

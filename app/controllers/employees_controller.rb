@@ -9,10 +9,14 @@ class EmployeesController < ApplicationController
     end
   end
 
+  def confirmation
+    @employee = Employee.find(params[:id])
+  end
+
   def create
     @employee = Employee.new(employee_params)
     if @employee.save
-      redirect_to "/"
+      redirect_to confirm_path(@employee)
     else
       @errors = @employee.errors.full_messages
       render :new
@@ -27,7 +31,6 @@ class EmployeesController < ApplicationController
       params[:employee][:is_manager] = false
     end
     params.require(:employee).permit(:first_name, :last_name, :employee_id, :password, :warehouse_id, :is_manager)
-
   end
 
 

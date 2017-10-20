@@ -201,6 +201,27 @@ input {
   padding: 1.25em;
 }
 
+#employee-confirm {
+  width: 400px;
+  margin: 0 auto;
+  border: 1px solid gray;
+  border-radius: 25px;
+  padding: 1.25em;
+}
+
+#employee-confirm p.success {
+  color: green;
+  font-style: normal;
+}
+
+#employee-confirm p {
+  font-style: italic;
+}
+
+#employee-confirm table {
+  text-align: left;
+}
+
 /* end new employee-page styles */
 
 /* warehouse styles */
@@ -213,7 +234,7 @@ input {
   padding: 1.25em;
 }
 
-#warehouse-show {
+#warehouse-confirm {
   width: 400px;
   margin: 0 auto;
   border: 1px solid gray;
@@ -221,11 +242,11 @@ input {
   padding: 1.25em;
 }
 
-#warehouse-show p {
+#warehouse-confirm p {
   color: green;
 }
 
-#warehouse-show table {
+#warehouse-confirm table {
   text-align: left;
 }
 
