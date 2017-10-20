@@ -2,15 +2,16 @@ require 'rails_helper'
 
 describe SessionsController, type: :controller do
   describe "POST /login a.k.a sessions#create" do
-      let!(:employee) { Employee.create(employee_id: 123, password: "password", warehouse: Warehouse.create!(city: "New York")) }
+      let!(:warehouse) { create(:warehouse) }
+      let!(:employee) { create(:employee, warehouse: warehouse)}
     context "when employee enters correct login info" do
       it "responds with status code of 302" do
-        post :create, { params: {employee_id: 123, password: "password"} }
+        post :create, { params: {employee_id: 12345, password: "password"} }
         expect(response).to have_http_status 302
       end
       it "adds employee's id as :user_id to session" do
-        post :create, { params: {employee_id: 123, password: "password"} }
-        expect(session[:user_id]).to be Employee.find_by(employee_id: 123).id
+        post :create, { params: {employee_id: 12345, password: "password"} }
+        expect(session[:user_id]).to eq Employee.find_by(employee_id: 12345).id
       end
     end
     context "when employee enters incorrect login info" do

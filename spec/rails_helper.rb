@@ -15,6 +15,7 @@ end
 DatabaseCleaner.strategy = :truncation
 
 RSpec.configure do |config|
+  config.include FactoryGirl::Syntax::Methods
   config.use_transactional_fixtures = false
 
   config.before(:suite) do
