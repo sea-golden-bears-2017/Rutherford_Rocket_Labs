@@ -9,16 +9,16 @@ class WarehousesController < ApplicationController
     end
   end
 
-  def show
+  def confirmation
     @warehouse = Warehouse.find(params[:id])
   end
 
   def create
     warehouse = Warehouse.new(warehouse_params)
+    warehouse.location_code = "#{warehouse.city.upcase[0..2]}-#{rand(10000..99999).to_s}"
     if warehouse.save
-      warehouse.location_code = "#{warehouse.city.upcase[0..2]}-#{rand(10000..99999).to_s}"
       warehouse.save
-      redirect_to warehouse_path(warehouse)
+      redirect_to confirmation_path(warehouse)
     else
       @errors = warehouse.errors.full_messages
       render :new
