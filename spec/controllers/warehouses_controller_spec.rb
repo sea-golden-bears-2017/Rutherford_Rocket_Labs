@@ -21,9 +21,16 @@ RSpec.describe WarehousesController, type: :controller do
       post :create, params: {warehouse: {city: "Mars"}}
       expect(Warehouse.last.city).to eq "Mars"
     end
-    it "responds with status code 302 after warehouse is created" do
+    it "redirects to the confirmation page when creation is successful" do
       post :create, params: {warehouse: {city: "Mars"}}
       expect(response.status).to eq 302
+    end
+  end
+
+  context "GET warehouse#confirmation" do
+    it "finds the warehouse id to confirm if creation is successful" do
+      post :create, params: {warehouse: {city: "Saturn"}}
+      expect(response).to redirect_to confirmation_path(Warehouse.last)
     end
   end
 
