@@ -1,0 +1,32 @@
+<section id="new-order-page">
+  <%= form_for :order, url: orders_path do |f| %>
+  <h2>New Order</h2>
+
+  <% if defined? @errors %>
+    <div class="errors">
+      <% @errors.each do |error| %>
+      <p class="errors"><%= error %></p>
+    </div>
+      <% end %>
+  <% end %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.label :warehouse %>
+    <%= f.select(:warehouse_id) do %>
+      <% Warehouse.all.each do |w| %>
+      <%= content_tag(:option, w.location_code, value: w.id) %>
+      <% end %>
+    <% end %>
+    <%= f.label 'Part Number' %>
+    <%= f.select(:part_id) do %>
+      <% Part.all.each do |p| %>
+      <%= content_tag(:option, p.part_no, value: p.id) %>
+      <% end %>
+    <% end %>
+    <%= f.label 'Quantity' %>
+    <%= f.text_field :quantity, class: 'part-quantity' %>
+    <%= f.submit 'Place Order', class: 'submit-button' %>
+  <% end %>
+</section><!-- end new order page -->
