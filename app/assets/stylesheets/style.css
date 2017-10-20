@@ -213,6 +213,22 @@ input {
   padding: 1.25em;
 }
 
+#warehouse-show {
+  width: 400px;
+  margin: 0 auto;
+  border: 1px solid gray;
+  border-radius: 25px;
+  padding: 1.25em;
+}
+
+#warehouse-show p {
+  color: green;
+}
+
+#warehouse-show table {
+  text-align: left;
+}
+
 /* end warehouse styles */
 
 /*inventory table styles*/

@@ -9,6 +9,10 @@ class WarehousesController < ApplicationController
     end
   end
 
+  def show
+    @warehouse = Warehouse.find(params[:id])
+  end
+
   def create
     warehouse = Warehouse.new(warehouse_params)
     if warehouse.save
