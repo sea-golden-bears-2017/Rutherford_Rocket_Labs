@@ -12,7 +12,7 @@ describe Order, type: :model do
       expect(order.description).to be_a String
     end
     it "has a generated name" do
-
+      expect(order.order_name).to be_a String
     end
     it "belongs to a warehouse" do
       expect(order.warehouse).to eq warehouse
@@ -22,7 +22,6 @@ describe Order, type: :model do
     end
     it "has many parts" do
       expect(order.parts).to match parts_array
-      p parts_array
     end
   end
 end
