@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe Employee, type: :model do
-  let!(:warehouse) { Warehouse.create!(city: "Denver") }
+  let!(:warehouse) { create(:warehouse) }
   let!(:employee) { Employee.create!( first_name: "Factory", last_name: "Girl", employee_id: 123, password: "password", is_manager: true, warehouse: warehouse) }
 
   describe "validations" do

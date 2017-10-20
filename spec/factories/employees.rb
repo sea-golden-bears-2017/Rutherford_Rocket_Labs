@@ -1,10 +1,10 @@
 FactoryGirl.define do
   factory :employee do
-    first_name "MyString"
-    last_name "MyString"
-    employee_id 1
-    password_digest "MyString"
+    first_name "Kelly"
+    last_name "Last"
+    employee_id 12345
+    password "password"
     is_manager false
-    belongs_to ""
+    belongs_to 
   end
 end
