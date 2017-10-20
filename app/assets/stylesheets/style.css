@@ -18,7 +18,7 @@ section {
 img {
   padding-top: .65em;
   padding-left: .55em;
-  width: 20%;
+  width: 100%;
   text-align: left;
 }
 
@@ -155,7 +155,7 @@ input {
 }
 
 .banner-logo h1 {
-  width: 100%;
+  /*width: 100%;*/
 }
 
 #layout-header li {
