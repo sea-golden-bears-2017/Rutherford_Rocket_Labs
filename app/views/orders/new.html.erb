@@ -9,9 +9,9 @@
     </div>
       <% end %>
   <% end %>
-    <%= f.label :name %>
+    <%= f.label 'Order Name' %>
     <%= f.text_field :name %>
-    <%= f.label :description %>
+    <%= f.label 'Order Description' %>
     <%= f.text_field :description %>
     <%= f.label :warehouse %>
     <%= f.select(:warehouse_id) do %>
@@ -19,15 +19,29 @@
       <%= content_tag(:option, w.location_code, value: w.id) %>
       <% end %>
     <% end %>
+
+
     <%= f.label 'Part Number' %>
-    <%= f.select(:part_id) do %>
-      <% Part.all.each do |p| %>
-      <%= content_tag(:option, p.part_no, value: p.id) %>
+    <%= f.select("part_no[1]") do %>
+      <% Part.select(:part_no).map(&:part_no).uniq.each do |p| %>
+      <%= content_tag(:option, p, value: p) %>
       <% end %>
     <% end %>
+
     <%= f.label 'Quantity' %>
-    <%= f.text_field :quantity, class: 'part-quantity' %>
-    <%= f.submit 'Add Another Part', class: 'submit-button' %>
+    <%= f.text_field "quantity[1]", class: 'part-quantity' %>
+
+    <%= f.label 'Part Number' %>
+    <%= f.select("part_no[2]") do %>
+      <% Part.select(:part_no).map(&:part_no).uniq.each do |p| %>
+      <%= content_tag(:option, p, value: p) %>
+      <% end %>
+    <% end %>
+
+    <%= f.label 'Quantity' %>
+    <%= f.text_field "quantity[2]", class: 'part-quantity' %>
+
+    <!-- <%= f.submit 'Add Another Part', class: 'submit-button' %> -->
     <%= f.submit 'Place Order', class: 'submit-button send-order' %>
   <% end %>
 </section><!-- end new order page -->

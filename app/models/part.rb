@@ -14,4 +14,5 @@ class Part < ApplicationRecord
   def self.unique_parts(warehouse_id)
     Part.where(warehouse_id: warehouse_id).select('distinct on (name) *')
   end
+
 end
