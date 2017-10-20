@@ -4,7 +4,7 @@ FactoryGirl.define do
     last_name "Last"
     employee_id 12345
     password "password"
-    is_manager true
+    is_manager false
     factory :manager do
       is_manager true
     end
