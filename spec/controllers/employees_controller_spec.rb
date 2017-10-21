@@ -17,26 +17,31 @@ RSpec.describe EmployeesController, type: :controller do
   end
 
   context "GET employees#create" do
-    it "creates a new employee" do
-      session[:user_id] = employee.id
-      expect(Employee.last.first_name).to eq "Dr"
+    it 'successfully creates an Employee' do
+      post :create, params: {employee: {first_name: "Blaine", last_name: "Anderson", employee_id: 1000, password: "blaine", warehouse_id: warehouse, is_manager: true}}
+      expect(Employee.last.first_name).to eq "Blaine"
     end
-    xit "returns a 302 response" do
-      post :create, params: {warehouse: {city: "Mars"}}
+    it "responds with status code 302 if Employee is created successfully" do
+      post :create, params: {employee: {first_name: "Blaine", last_name: "Anderson", employee_id: 1000, password: "blaine", warehouse_id: warehouse, is_manager: false}}
       expect(response.status).to eq 302
     end
-    xit "redirects to the confirmation page when creation is successful" do
-      post :create, params: {warehouse: {city: "Saturn"}}
-      expect(response).to redirect_to confirmation_path(Warehouse.last)
-    end
-    xit 'fails to create a warehouse and renders :new' do
-      post :create, params: {warehouse: {city: nil}}
-      expect(response).to render_template(:new)
+    # it 'fails to creates an Employee' do
+    #   post :create, params: {employee: {first_name: "", last_name: "Anderson2", employee_id: 1000, password: "blaine2", warehouse_id: warehouse, is_manager: false}}
+      # expect(employee.valid?).to eq false
+      # expect(employee.save!).to raise_error(ActiveRecord::RecordInvalid,"Validation failed: First name can't be blank")
+    # end
+    it "responds with status code 200 if Employee is created unsuccessfully" do
+      post :create, params: {employee: {first_name: "Blaine", last_name: "Anderson", employee_id: 1000, password: "blaine", warehouse_id: warehouse, is_manager: true}}
+      expect(response.status).to eq 200
     end
   end
 
-  context "GET employees#confirmation"
-
+  context "GET employees#confirmation" do
+    it "finds a employee and assigns it to @employee" do
+      get :confirmation, params: {id: employee.id}
+      expect(assigns(:employee)).to eq Employee.find(employee.id)
+    end
+  end
 
 
 
