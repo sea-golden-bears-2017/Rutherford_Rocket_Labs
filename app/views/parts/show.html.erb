@@ -1,5 +1,8 @@
 
 <section id = "part-show-page">
+  <% if @parts[0] == nil %>
+    <h3>nothing to show</h3>
+  <% else %>
 <h3> <%= @parts[0].part_no %>: <%= @parts[0].name.capitalize %> </h3>
   <table >
     <thead>
@@ -20,6 +23,6 @@
       </tr>
     <% end %>
   </table>
+  <% end %>
   <%= link_to "Back", parts_url %>
-
 </section>

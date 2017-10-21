@@ -26,7 +26,7 @@ end
 def show
   if logged_in?
     part = Part.find(params[:id])
-    @parts = Part.all_of_type(part.part_no)
+    @parts = Part.all_of_type_in_inventory(part.part_no)
   else
     redirect_to '/'
   end
@@ -37,7 +37,7 @@ def remove
   part.removed = true
   part.removed_by_id = employee_logged_in.id
   part.save
-  @parts = Part.all_of_type(part.part_no)
+  @parts = Part.all_of_type_in_inventory(part.part_no)
   render :show
 end
 

@@ -4,7 +4,7 @@ class Part < ApplicationRecord
   belongs_to :receiver, foreign_key: :received_by_id, class_name: :Employee, optional: true
   belongs_to :order, optional: true
 
-  def self.all_of_type(part_no)
+  def self.all_of_type_in_inventory(part_no)
     Part.where(removed: false).where(part_no: part_no)
   end
 
@@ -12,8 +12,8 @@ class Part < ApplicationRecord
     Part.where(part_no: part_no, warehouse_id: warehouse_id).count
   end
 
-  def self.unique_parts(warehouse_id)
-    Part.where(warehouse_id: warehouse_id).select('distinct on (name) *')
+  def self.unique_parts_in_inventory(warehouse_id)
+    Part.where(warehouse_id: warehouse_id, removed: false).select('distinct on (name) *')
   end
 
   def self.number_and_name
