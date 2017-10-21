@@ -1,14 +1,15 @@
 <section id="new-employee-page">
+
+  <%= form_for @employee, url: employees_path do |f| %>
   <h2>New Employee</h2>
 
   <% if defined? @errors %>
     <div class="errors">
       <% @errors.each do |error| %>
-      <p><%= error %></p>
+      <p class="errors"><%= error %></p>
     </div>
       <% end %>
   <% end %>
-  <%= form_for @employee, url: employees_path do |f| %>
     <%= f.label :first_name%>
     <%= f.text_field :first_name %>
     <%= f.label :last_name%>
@@ -32,7 +33,6 @@
     <%= f.radio_button(:is_manager, 'false') %>
 
     <%= f.submit "Create Employee", class: 'submit-button' %>
-
 
   <% end %>
 </section>

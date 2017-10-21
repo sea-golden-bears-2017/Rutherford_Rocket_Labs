@@ -7,6 +7,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'rspec/rails'
 require 'capybara/rails'
 require 'factory_girl_rails'
+# require 'support/factory_bot'
 
 Capybara.register_driver :poltergeist do |app|
   Capybara::Poltergeist::Driver.new(app, js_errors: false)
@@ -15,6 +16,7 @@ end
 DatabaseCleaner.strategy = :truncation
 
 RSpec.configure do |config|
+  config.include FactoryGirl::Syntax::Methods
   config.use_transactional_fixtures = false
 
   config.before(:suite) do

@@ -44,7 +44,7 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'pry'
-  gem 'factory_girl_rails'
+  gem "factory_girl_rails", "~> 4.0"
   gem 'simplecov', require: false
   gem 'shoulda-matchers'
   gem 'poltergeist'
