@@ -10,6 +10,7 @@
             <li><%= link_to "Manage Shipment", home_path %></li>
             <!-- FIXME Place Order url replace with :new / new_order_path? -->
             <li><%= link_to "Place Order", new_order_path %></li>
+            <li><%= link_to "View Orders", orders_path %></li>
           </ul>
         </nav>
       <% else %>
@@ -18,6 +19,7 @@
             <li><%= link_to "Inventory", parts_path %></li>
             <!-- FIXME Manage Shipment url replace with :new -->
             <li><%= link_to "Manage Shipment", home_path %></li>
+            <li><%= link_to "View Orders", orders_path %></li>
           </ul>
         </nav>
       <% end %>
