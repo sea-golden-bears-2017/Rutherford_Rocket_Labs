@@ -16,7 +16,25 @@ RSpec.describe EmployeesController, type: :controller do
     end
   end
 
-  context "GET employees#create"
+  context "GET employees#create" do
+    it "creates a new employee" do
+      session[:user_id] = employee.id
+      expect(Employee.last.first_name).to eq "Dr"
+    end
+    xit "returns a 302 response" do
+      post :create, params: {warehouse: {city: "Mars"}}
+      expect(response.status).to eq 302
+    end
+    xit "redirects to the confirmation page when creation is successful" do
+      post :create, params: {warehouse: {city: "Saturn"}}
+      expect(response).to redirect_to confirmation_path(Warehouse.last)
+    end
+    xit 'fails to create a warehouse and renders :new' do
+      post :create, params: {warehouse: {city: nil}}
+      expect(response).to render_template(:new)
+    end
+  end
+
   context "GET employees#confirmation"
 
 
