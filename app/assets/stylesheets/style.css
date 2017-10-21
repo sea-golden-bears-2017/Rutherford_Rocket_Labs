@@ -22,6 +22,11 @@ img {
   text-align: left;
 }
 
+header {
+  border-bottom: 2px solid #f4f4f4;
+  box-shadow: 10px 10px 5px #f4f4f4;
+}
+
 /* login-page styles */
 
 #main-logo {
