@@ -33,7 +33,12 @@ def show
 end
 
 def remove
-  
+  part = Part.find(params[:id])
+  part.removed = true
+  part.removed_by_id = employee_logged_in.id
+  part.save
+  @parts = Part.all_of_type(part.part_no)
+  render :show
 end
 
 private

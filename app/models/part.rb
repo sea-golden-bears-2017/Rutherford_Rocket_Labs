@@ -5,7 +5,7 @@ class Part < ApplicationRecord
   belongs_to :order, optional: true
 
   def self.all_of_type(part_no)
-    Part.where(part_no: part_no)
+    Part.where(removed: false).where(part_no: part_no)
   end
 
   def self.number_of(part_no, warehouse_id)
@@ -20,6 +20,6 @@ class Part < ApplicationRecord
     Part.all.map { |part| "#{part.part_no}-#{part.name.capitalize}" }.uniq
   end
 
-  
+
 
 end
