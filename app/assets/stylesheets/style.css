@@ -270,13 +270,13 @@ input {
   margin-bottom: .5em;
 }
 
-<<<<<<< HEAD
 #main-nav {
   /*border-bottom: 2px solid #000;
   border-top: 2px solid #000;*/
   width: 100%;
   margin: 0 auto;
-=======
+}
+
 #homepage p {
 text-align: justify;
 line-height: 1.3em;
@@ -287,13 +287,16 @@ font-family: 'Slabo 27px', serif;
 #main-nav-manager {
   border-bottom: 2px solid #000;
   border-top: 2px solid #000;
->>>>>>> master
   overflow: hidden;
 }
 
 #main-nav-manager ul {
   margin-left: 35px;
   list-style-type: none;
+}
+
+#main-nav {
+  overflow: hidden;
 }
 
 #main-nav li {
@@ -306,6 +309,26 @@ font-family: 'Slabo 27px', serif;
   width: 25%;
   border: 3px solid #424143;
   margin-right: 1em;
+  display: block;
+  text-decoration: none;
+}
+
+#main-nav a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+#main-nav a:link,
+#main-nav a:visited {
+    color: #000;
+}
+
+#main-nav a:hover,
+#main-nav a:focus {
+  color: #fff;
+  background-color: #c62128;
 }
 
 #main-nav-manager li {
@@ -314,7 +337,6 @@ font-family: 'Slabo 27px', serif;
   text-align: center;
   font-size: 20px;
   width: 32%;
-
 }
 
 #main-nav-manager a {
@@ -382,36 +404,36 @@ font-family: 'Slabo 27px', serif;
 
 /* begin manager nav */
 #main-nav-employee {
-border-bottom: 2px solid #000;
-border-top: 2px solid #000;
-overflow: hidden;
+  border-bottom: 2px solid #000;
+  border-top: 2px solid #000;
+  overflow: hidden;
 }
 
 #main-nav-employee ul {
-margin-left: 35px;
-list-style-type: none;
+  margin-left: 35px;
+  list-style-type: none;
 }
 
 #main-nav-employee li {
-display: block;
-float: left;
-text-align: center;
-font-size: 20px;
-width: 48%;
+  display: block;
+  float: left;
+  text-align: center;
+  font-size: 20px;
+  width: 48%;
 }
 
 #main-nav-employee a {
-color: #000;
-display: block;
-padding-top: 10px;
-padding-bottom: 10px;
-text-decoration: none;
->>>>>>> master
+  color: #000;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
 }
 
-#main-nav-employee a:hover {
-background-color: #c62128;
-color: white;
+#main-nav-employee a:hover,
+#main-nav-employee a:focus {
+  background-color: #c62128;
+  color: white;
 }
 /* end manager nav */
 
@@ -606,9 +628,6 @@ color: white;
 /* end new orders styles */
 
 /* end inventory show table styles*/
-
-<<<<<<< HEAD
-=======
 
 /*inventory table styles*/
 
