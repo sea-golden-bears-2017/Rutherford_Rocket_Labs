@@ -231,7 +231,7 @@ line-height: 1.3em;
 font-family: 'Slabo 27px', serif;
 }
 
-    /* begin employee nav */
+/* begin employee nav */
 #main-nav-manager {
   border-bottom: 2px solid #000;
   border-top: 2px solid #000;
@@ -345,7 +345,6 @@ color: white;
 
 /* warehouse styles */
 
-
 #warehouse-new-page h1, h2, h3, label {
   color: #000;
 }
@@ -374,6 +373,22 @@ color: white;
 }
 
 /* end warehouse styles */
+
+#order-confirm {
+  width: 400px;
+  margin: 0 auto;
+  border: 1px solid gray;
+  border-radius: 25px;
+  padding: 1.25em;
+}
+
+#order-confirm p {
+  color: green;
+}
+
+#order-confirm table {
+  text-align: left;
+}
 
 /*inventory table styles*/
 
