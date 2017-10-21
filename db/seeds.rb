@@ -17,6 +17,7 @@ Warehouse.create(city: "Phoenix", location_code: "PHO-00001")
 Warehouse.create(city: "Williamsburg", location_code: "WIL-00001")
 Warehouse.create(city: "Northport", location_code: "NOR-00001")
 
+Employee.create(first_name: "Dr. Barnaby", last_name: "Van Nostram", employee_id: 1, password: "password", is_manager: true, warehouse: warehouse)
 Employee.create(first_name: "Dr", last_name: "Rutherford", employee_id: 0000, password: "commissioner", is_manager: true, warehouse: warehouse)
 Employee.create(first_name: "Jules", last_name: "Dr", employee_id: 0001, password: "propulsion", is_manager: false, warehouse: warehouse)
 

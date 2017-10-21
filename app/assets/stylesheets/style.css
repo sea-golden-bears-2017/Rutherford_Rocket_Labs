@@ -139,7 +139,6 @@ input {
 .submit-button:hover,
 .submit-button:focus {
   background-color: #c62128;
-  transition: .3s;
   color: #fff;
 }
 
@@ -170,8 +169,8 @@ input {
 }
 
 #layout-header li {
-  font-family: 'Slabo 27px', serif;
-  font-size: 1.5em;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
   float: left;
 }
 
@@ -181,6 +180,7 @@ input {
 }
 
 .logout {
+  font-family: 'Oswald', sans-serif;
   font-size: .9em;
   border: none;
   background-color: #fff;
@@ -191,31 +191,58 @@ input {
 
 .logout:hover,
 .logout:focus {
-  color: lime;
+  color: #c62128;
+}
+
+#manager-nav {
+  overflow: hidden;
 }
 
 #manager-nav li {
-  font-family: 'Slabo 27px', serif;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  display: block;
+  float: left;
+  text-align: center;
   font-size: 1em;
-  float: none;
+  width: 25%;
+  border: 1px solid gray;
+  margin-right: .25em;
 }
+
 #manager-nav a {
   text-decoration: none;
   color: black;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#manager-nav a:link,
+#manager-hav a:visited {
+  color #000;
+}
+
+#manager-nav a:hover,
+#manager-hav a:focus {
+  color: #fff;
+  background-color: #c62128;
 }
 /* end application.html styles */
 
 /* homepage styles */
+
 #homepage {
   color: #000;
   width: 100%;
   clear: both;
 }
+
 #homepage-container {
+  width: 50%;
   margin: 0 auto;
   padding: 1.25em;
   padding-top: 3em;
-  width: 50%;
 }
 
 #homepage h1 {
@@ -277,7 +304,6 @@ input {
 
 /* new employee-page styles */
 
-
 #new-employee-page h2 {
   margin-bottom: 1.2em;
 }
@@ -318,7 +344,6 @@ input {
 /* end new employee-page styles */
 
 /* warehouse styles */
-
 
 #warehouse-new-page h1, h2, h3, label {
   color: #000;
@@ -362,9 +387,11 @@ input {
   margin-left: auto;
   margin-right: auto;
 }
+
 #inventory-index-page td {
   width: 300px;
 }
+
 #inventory-index-page th {
   background-color: lime;
 }
@@ -373,9 +400,11 @@ input {
   height: 25px;
   font-size: 1.2em;
 }
+
 #inventory-index-page tr:nth-child(even) {
   background-color: white;
 }
+
 #inventory-index-page tr:nth-child(odd) {
   background-color: gainsboro;
 }
@@ -383,6 +412,7 @@ input {
 #inventory-index-page h1 {
   text-align: center;
 }
+
 #inventory-index-page h3 {
   color: #000;
   margin-left: 200px;
