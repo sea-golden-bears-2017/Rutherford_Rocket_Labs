@@ -1,9 +1,8 @@
 
-
-
 <section id='homepage'>
   <div id="homepage-container">
     <h1>Inventory Management Portal</h1>
+<<<<<<< HEAD
     <nav id="main-nav">
       <ul>
         <li><%= link_to "Inventory", parts_path %></li>
@@ -40,6 +39,27 @@
         you knowing.
       </p>
       <p>
+=======
+      <% if manager_logged_in? %>
+        <nav id="main-nav-manager">
+          <ul>
+            <li><%= link_to "Inventory", parts_path %></li>
+            <!-- FIXME Manage Shipment url replace with :new -->
+            <li><%= link_to "Manage Shipment", orders_path %></li>
+            <!-- FIXME Place Order url replace with :new / new_order_path? -->
+            <li><%= link_to "Place Order", new_order_path %></li>
+          </ul>
+        </nav>
+      <% else %>
+        <nav id="main-nav-employee">
+          <ul>
+            <li><%= link_to "Inventory", parts_path %></li>
+            <!-- FIXME Manage Shipment url replace with :new -->
+            <li><%= link_to "Manage Shipment", orders_path %></li>
+          </ul>
+        </nav>
+      <% end %>
+>>>>>>> master
 
       </p>
     </aside><!-- end site function -->
