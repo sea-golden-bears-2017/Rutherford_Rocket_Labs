@@ -20,6 +20,6 @@ class Part < ApplicationRecord
     Part.all.map { |part| "#{part.part_no}-#{part.name.capitalize}" }.uniq
   end
 
-
+  
 
 end

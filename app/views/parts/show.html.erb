@@ -10,7 +10,7 @@
       <th>Location</th>
       <th>Remove</th>
     </tr>
-    <% @parts.each do |part| %>
+    <% @parts.joins(:warehouse).merge(Warehouse.order(:location_code)).each do |part| %>
       <tr>
         <td><%=part.id%></td>
         <td><%=part.part_no%></td>
