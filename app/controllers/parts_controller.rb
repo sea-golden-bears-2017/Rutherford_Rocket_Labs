@@ -8,6 +8,13 @@ def index
   end
 end
 
+def new
+end
+
+def create
+  4/0
+end
+
 def show
   if logged_in?
     part = Part.find(params[:id])
