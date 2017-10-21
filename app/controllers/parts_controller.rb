@@ -19,6 +19,7 @@ def create
     @order = Order.last
     create_parts
     @parts = @order.parts
+    flash.clear
     redirect_to affirm_path(@order)
   end
 end

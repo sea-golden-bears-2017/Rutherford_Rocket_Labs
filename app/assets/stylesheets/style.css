@@ -412,6 +412,15 @@ color: white;
   float: left;
 }
 
+#new-parts-page {
+  width: 500px;
+  margin: 0 auto;
+  border: 1px solid gray;
+  border-radius: 25px;
+  padding: 1.25em;
+  overflow: hidden;
+}
+
 /* end parts styles */
 
 /*inventory table styles*/
