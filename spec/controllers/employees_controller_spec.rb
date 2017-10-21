@@ -25,13 +25,11 @@ RSpec.describe EmployeesController, type: :controller do
       post :create, params: {employee: {first_name: "Blaine", last_name: "Anderson", employee_id: 1000, password: "blaine", warehouse_id: warehouse, is_manager: false}}
       expect(response.status).to eq 302
     end
-    # it 'fails to creates an Employee' do
-    #   post :create, params: {employee: {first_name: "", last_name: "Anderson2", employee_id: 1000, password: "blaine2", warehouse_id: warehouse, is_manager: false}}
-      # expect(employee.valid?).to eq false
-      # expect(employee.save!).to raise_error(ActiveRecord::RecordInvalid,"Validation failed: First name can't be blank")
-    # end
+    it 'fails to creates an Employee' do
+      expect{post :create, params: {employee: {first_name: "", last_name: "Anderson2", employee_id: 1000, password: "blaine2", warehouse_id: warehouse, is_manager: false}}}.to change{Employee.count}.by(0)
+    end
     it "responds with status code 200 if Employee is created unsuccessfully" do
-      post :create, params: {employee: {first_name: "Blaine", last_name: "Anderson", employee_id: 1000, password: "blaine", warehouse_id: warehouse, is_manager: true}}
+      post :create, params: {employee: {first_name: "", last_name: "Anderson", employee_id: 1000, password: "blaine", warehouse_id: warehouse, is_manager: true}}
       expect(response.status).to eq 200
     end
   end

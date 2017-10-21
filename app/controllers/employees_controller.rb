@@ -15,7 +15,7 @@ class EmployeesController < ApplicationController
 
   def create
     @employee = Employee.new(employee_params)
-    if @employee.save!
+    if @employee.save
       redirect_to confirm_path(@employee)
     else
       @errors = @employee.errors.full_messages
