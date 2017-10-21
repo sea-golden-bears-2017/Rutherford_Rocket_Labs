@@ -9,6 +9,9 @@
       <th>Name</th>
       <th>Location</th>
       <th>Remove</th>
+      <% if manager_logged_in? %>
+        <th>Transfer</th>
+      <% end %>
     </tr>
     <% @parts.each do |part| %>
       <tr>
@@ -16,7 +19,10 @@
         <td><%=part.part_no%></td>
         <td><%= part.name.capitalize %></td>
         <td><%= part.warehouse.location_code %></td>
-        <td><%= link_to "remove"%>  </td>
+        <td><%= link_to "Remove" %>  </td>
+        <% if manager_logged_in? %>
+          <td><%= link_to "Transfer", edit_part_url %> </td>
+        <% end %>
       </tr>
     <% end %>
   </table>

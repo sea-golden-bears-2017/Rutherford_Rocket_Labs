@@ -27,7 +27,32 @@ def show
   end
 end
 
+def edit
+  @part = Part.find(params[:id])
+  if manager_logged_in?
+    render :edit
+  else
+    redirect_to part_path(@part)
+  end
+end
+
+def update
+  ##FIXME show routes reflects part number. consider updating to name instead
+  part = Part.find(params[:id])
+  if parts_params[:warehouse_id] != part.warehouse_id
+    part.update(parts_params)
+    flash[:success] = "You transferred Part #{part.id} '#{part.part_no} #{part.name}' to Warehouse #{part.warehouse.location_code}"
+    redirect_to part_path(part)
+  else
+    redirect_to part_path(part)
+  end
+end
+
+
 private
 
+def parts_params
+  params.require(:part).permit(:warehouse_id)
+end
 
 end
