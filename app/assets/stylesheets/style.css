@@ -168,7 +168,29 @@ input {
 .banner-logo {
   width: 100%;
   height: 90px;
-  background-color: #000;
+}
+
+.banner-logo span {
+  color: #c62128;
+}
+
+.banner-logo h4 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  padding-left: .55em;
+  padding-top: .55em;
+  font-size: 1.6em;
+  font-style: italic;
+}
+
+.banner-logo a {
+  color: #000;
+  text-decoration: none;
+}
+
+.banner-logo a:hover,
+.banner-logo a:focus {
+  color: gray;
 }
 
 .banner-logo h1 {
