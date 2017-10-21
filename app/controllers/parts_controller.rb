@@ -32,6 +32,10 @@ def show
   end
 end
 
+def remove
+  
+end
+
 private
 
 

@@ -16,7 +16,7 @@
         <td><%=part.part_no%></td>
         <td><%= part.name.capitalize %></td>
         <td><%= part.warehouse.location_code %></td>
-        <td><%= link_to "remove"%>  </td>
+        <td><%= link_to "remove", remove_path(part)%></td>
       </tr>
     <% end %>
   </table>
