@@ -12,7 +12,10 @@ def new
 end
 
 def create
-  4/0
+  @order = Order.last
+  create_parts
+  @parts = @order.parts
+  redirect_to affirm_path(@order)
 end
 
 def show
@@ -23,5 +26,8 @@ def show
     redirect_to '/'
   end
 end
+
+private
+
 
 end

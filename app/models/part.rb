@@ -17,7 +17,9 @@ class Part < ApplicationRecord
   end
 
   def self.number_and_name
-    Part.all.map { |part| "#{part.part_no} #{part.name.capitalize}" }.uniq
+    Part.all.map { |part| "#{part.part_no}-#{part.name.capitalize}" }.uniq
   end
+
+
 
 end
