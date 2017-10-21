@@ -231,7 +231,7 @@ line-height: 1.3em;
 font-family: 'Slabo 27px', serif;
 }
 
-    /* begin employee nav */
+/* begin employee nav */
 #main-nav-manager {
   border-bottom: 2px solid #000;
   border-top: 2px solid #000;
@@ -345,7 +345,6 @@ color: white;
 
 /* warehouse styles */
 
-
 #warehouse-new-page h1, h2, h3, label {
   color: #000;
 }
@@ -374,6 +373,46 @@ color: white;
 }
 
 /* end warehouse styles */
+
+/* order styles */
+#order-confirm {
+  width: 400px;
+  margin: 0 auto;
+  border: 1px solid gray;
+  border-radius: 25px;
+  padding: 1.25em;
+}
+
+#order-confirm p {
+  color: green;
+}
+
+#order-confirm table {
+  text-align: left;
+}
+
+#order-confirm h3 {
+  color: #c62128;
+}
+
+.order-table,
+.order-table-parts {
+  border-collapse: separate;
+  border-spacing: .5em;
+}
+
+.order-table-parts td.quantity {
+  text-align: center;
+}
+/*end order styles */
+
+/* parts styles */
+
+.new-parts-ul li {
+  float: left;
+}
+
+/* end parts styles */
 
 /*inventory table styles*/
 
@@ -470,6 +509,7 @@ color: white;
   float: right;
 }
 
+
 #new-order-page input, label {
   display: block;
   margin-top: .55em;
@@ -558,6 +598,12 @@ color: white;
   background-color: gainsboro;
 }
 /* end inventory show table styles*/
+
+/* flash styles */
+div.notice {
+  color: red;
+}
+/* end flash styles */
 
 /* footer styles */
 footer {

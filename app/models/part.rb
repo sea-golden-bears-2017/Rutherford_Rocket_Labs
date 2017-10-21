@@ -16,4 +16,10 @@ class Part < ApplicationRecord
     Part.where(warehouse_id: warehouse_id).select('distinct on (name) *')
   end
 
+  def self.number_and_name
+    Part.all.map { |part| "#{part.part_no}-#{part.name.capitalize}" }.uniq
+  end
+
+
+
 end

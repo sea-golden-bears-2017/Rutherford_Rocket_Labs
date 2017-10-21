@@ -9,4 +9,5 @@ class Employee < ApplicationRecord
   has_many :received_parts, foreign_key: :received_by_id, class_name: :Part
 
   has_many :orders
+
 end

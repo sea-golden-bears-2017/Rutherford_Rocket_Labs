@@ -8,6 +8,21 @@ def index
   end
 end
 
+def new
+end
+
+def create
+  if create_parts == nil
+    flash[:notice] = "Please enter valid quantities"
+    render :new
+  else
+    @order = Order.last
+    create_parts
+    @parts = @order.parts
+    redirect_to affirm_path(@order)
+  end
+end
+
 def show
   if logged_in?
     part = Part.find(params[:id])
@@ -16,5 +31,8 @@ def show
     redirect_to '/'
   end
 end
+
+private
+
 
 end
