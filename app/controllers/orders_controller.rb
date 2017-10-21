@@ -13,10 +13,15 @@ class OrdersController < ApplicationController
     end
   end
 
+  def new
+  end
+  
   def show
+    @order = Order.find(params[:id])
   end
 
-  def new
+  def confirmation
+    @order = Order.find(params[:id])
   end
 
   private

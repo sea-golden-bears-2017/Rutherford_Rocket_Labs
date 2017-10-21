@@ -1,34 +1,7 @@
 <section id="order-confirm">
   <table>
     <p class="success">You've successfully submitted a new order</p>
-    <tr>
-      <th>Order Description: </th>
-      <td> <%= Order.last.description %> </td>
-    </tr>
-      <th>Warehouse: </th>
-      <td> <%= Order.last.warehouse.location_code %> </td>
-    </tr>
-    <tr>
-      <th>Order Name: </th>
-      <td> <%= Order.last.order_name %> </td>
-    </tr>
-    <tr>
-
+    <%= render "order_show" %>
   </table>
-<h3>Parts</h3>
-<table>
-  <tr>
-    <% Order.last.unique_parts.each do |part| %>
-    <th>Part Number</th>
-    <th>Part Name</th>
-    <th>Quantity</th>
-  </tr>
-  <tr>
-    <td> <%= part[0] %> </td>
-    <td> <%= part[1] %> </td>
-    <td> <%= Order.last.part_count(part) %> </td>
-  </tr>
-  <% end %>
-</table>
 
 </section>

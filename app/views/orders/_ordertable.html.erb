@@ -13,7 +13,7 @@
       <td> <%= o.order_name %> </td>
       <td> <%= o.description %> </td>
       <td> <%= o.warehouse.city %> </td>
-      <td> View </td>
+      <td>  <%= link_to "View", order_path(o) %> </td>
     </tr>
     <% end %>
   </table>
