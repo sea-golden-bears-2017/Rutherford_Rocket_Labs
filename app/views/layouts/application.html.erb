@@ -16,7 +16,7 @@
       <div class="banner-logo">
         <h1 id="main-logo">
           <a href="/home">
-            <%= image_tag "rutherford-rockets.svg" %>
+            <%= image_tag "rutherford-rockets-logo.svg" %>
           </a>
         </h1>
       </div><!-- end banner logo -->
@@ -28,10 +28,10 @@
               Hello, <%= employee_logged_in.first_name %> |
             </li>
             <li>
-              <%= button_to "Logout", {action: "destroy", controller: "sessions"}, {method: :delete, class: "logout"} %>
+              <%= button_to " Logout", {action: "destroy", controller: "sessions"}, {method: :delete, class: "logout"} %>
             </li>
           </ul>
-        
+
       </nav>
         <% end %>
     </header>
