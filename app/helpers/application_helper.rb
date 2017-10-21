@@ -16,11 +16,6 @@ module ApplicationHelper
     Employee.find(session[:user_id])
   end
 
-
-  def count_parts(order, part)
-    order.parts.where(name: part.name).count
-  end
-
   def quantity_zero?
     return quantities.inject(0){ |sum, q| sum + q } == 0
   end
