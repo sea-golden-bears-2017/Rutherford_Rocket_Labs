@@ -296,7 +296,6 @@ font-family: 'Slabo 27px', serif;
   list-style-type: none;
 }
 
-<<<<<<< HEAD
 #main-nav li {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
@@ -307,14 +306,15 @@ font-family: 'Slabo 27px', serif;
   width: 25%;
   border: 3px solid #424143;
   margin-right: 1em;
-=======
+}
+
 #main-nav-manager li {
   display: block;
   float: left;
   text-align: center;
   font-size: 20px;
   width: 32%;
->>>>>>> master
+
 }
 
 #main-nav-manager a {
@@ -331,7 +331,6 @@ font-family: 'Slabo 27px', serif;
 }
 /* end employee nav */
 
-<<<<<<< HEAD
 #homepage p {
   text-align: justify;
   line-height: 1.5em;
@@ -379,7 +378,8 @@ font-family: 'Slabo 27px', serif;
 #manager-hav a:focus {
   color: #fff;
   background-color: #c62128;
-=======
+}
+
 /* begin manager nav */
 #main-nav-employee {
 border-bottom: 2px solid #000;
@@ -685,7 +685,6 @@ color: white;
 }
 /* end inventory show table styles*/
 
->>>>>>> master
 /* footer styles */
 footer {
   background-color: #35383d;
