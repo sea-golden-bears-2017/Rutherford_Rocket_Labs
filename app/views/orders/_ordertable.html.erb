@@ -13,14 +13,14 @@
       <th>Super</th>
       <th>Duper</th>
       <th>Fake</th>
-      <th>Line</th>
+      <th>View</th>
     </tr>
-    <!-- <% parts.each do |part| %>
+    <% parts.each do |part| %>
       <tr>
         <td><%=part.part_no%></td>
         <td><%= part.name.capitalize %></td>
         <td><%= Part.number_of(part.part_no, warehouse.id) %></td>
         <td><%= link_to "view", part_path(part)%></td>
       </tr>
-    <% end %> -->
+    <% end %>
   </table>
