@@ -482,6 +482,83 @@ color: white;
 /* end new orders styles */
 
 /* end inventory show table styles*/
+
+
+/*inventory table styles*/
+
+#order-index-page {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#order-index-page table {
+  text-align: left;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#order-index-page td {
+  width: 300px;
+}
+#order-index-page th {
+  background-color: lime;
+}
+
+#order-index-page tr {
+  height: 25px;
+  font-size: 1.2em;
+}
+#order-index-page tr:nth-child(even) {
+  background-color: white;
+}
+#order-index-page tr:nth-child(odd) {
+  background-color: gainsboro;
+}
+
+#order-index-page h1 {
+  text-align: center;
+}
+#order-index-page h3 {
+  color: #000;
+  margin-left: 200px;
+}
+
+
+/*end inventory table styles*/
+/* inventory show table styles*/
+#order-show-page {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#order-show-page h3 {
+  color: #000;
+  margin-left: 200px;
+}
+#order-show-page table {
+  text-align: left;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#order-show-page tr {
+  height: 25px;
+  font-size: 1.2em;
+}
+#order-show-page td {
+  width: 300px;
+}
+#order-show-page th {
+  background-color: lime;
+}
+#order-show-page tr:nth-child(even) {
+  background-color: white;
+}
+#order-show-page tr:nth-child(odd) {
+  background-color: gainsboro;
+}
+/* end inventory show table styles*/
+
 /* footer styles */
 footer {
   background-color: #35383d;
