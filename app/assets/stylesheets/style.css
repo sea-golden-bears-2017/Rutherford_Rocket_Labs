@@ -406,6 +406,14 @@ color: white;
 }
 /*end order styles */
 
+/* parts styles */
+
+.new-parts-ul li {
+  float: left;
+}
+
+/* end parts styles */
+
 /*inventory table styles*/
 
 #inventory-index-page {
@@ -590,6 +598,12 @@ color: white;
   background-color: gainsboro;
 }
 /* end inventory show table styles*/
+
+/* flash styles */
+div.notice {
+  color: red;
+}
+/* end flash styles */
 
 /* footer styles */
 footer {

@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   def index
+    @orders = Order.full_orders
   end
 
   def create
@@ -15,7 +16,7 @@ class OrdersController < ApplicationController
 
   def new
   end
-  
+
   def show
     @order = Order.find(params[:id])
   end

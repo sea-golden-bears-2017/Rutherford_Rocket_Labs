@@ -12,10 +12,15 @@ def new
 end
 
 def create
-  @order = Order.last
-  create_parts
-  @parts = @order.parts
-  redirect_to affirm_path(@order)
+  if create_parts == nil
+    flash[:notice] = "Please enter valid quantities"
+    render :new
+  else
+    @order = Order.last
+    create_parts
+    @parts = @order.parts
+    redirect_to affirm_path(@order)
+  end
 end
 
 def show

@@ -17,11 +17,15 @@ module ApplicationHelper
   end
 
   def create_parts
-    order = Order.last
-    warehouse = order.warehouse
-    parts = extract_part_information
-    quantities.count.times do |number|
-      quantities[number].times {Part.create(part_no: parts[number][0], name: parts[number][1], warehouse: warehouse, order: order, removed: false)}
+    if quantities.inject(0){ |sum, q| sum + q } == 0
+      nil
+    else
+      order = Order.last
+      warehouse = order.warehouse
+      parts = extract_part_information
+      quantities.count.times do |number|
+        quantities[number].times {Part.create(part_no: parts[number][0], name: parts[number][1], warehouse: warehouse, order: order, removed: false)}
+      end
     end
   end
 
