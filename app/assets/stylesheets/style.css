@@ -189,7 +189,7 @@ input {
 
 .logout:hover,
 .logout:focus {
-  color: lime;
+  color: #c62128;
 }
 
 #manager-nav li {
@@ -260,8 +260,8 @@ font-family: 'Slabo 27px', serif;
 }
 
 #main-nav-manager a:hover {
-  background-color: lime;
-  color: black;
+  background-color: #c62128;
+  color: white;
 }
 /* end employee nav */
 
@@ -448,6 +448,39 @@ color: white;
 #part-show-page tr:nth-child(odd) {
   background-color: gainsboro;
 }
+
+/* new orders styles */
+
+#new-order-page {
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 25px;
+  padding: 5.25em;
+  color: #000;
+}
+
+#new-order-page form {
+  border: 1px solid #000;
+  padding: 1.25em;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.send-order {
+  float: right;
+}
+
+#new-order-page input, label {
+  display: block;
+  margin-top: .55em;
+}
+
+.part-quantity {
+  width: 50px;
+}
+
+/* end new orders styles */
+
 /* end inventory show table styles*/
 
 
