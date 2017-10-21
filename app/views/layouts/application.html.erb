@@ -13,6 +13,7 @@
 
   <body>
     <header>
+      <% unless current_page?(login_path) %>
       <div class="banner-logo">
         <h4>
           <a href="/home">
@@ -24,6 +25,7 @@
             <%= image_tag "rutherford-rockets-logo.svg" %>
           </a>
         </h1>
+        <% end %>
       </div><!-- end banner logo -->
       <nav id="layout-header">
         <% if !logged_in? %>
@@ -37,7 +39,7 @@
             </li>
           </ul>
       </nav>
-        <% end %>
+      <% end %><!-- end unless -->
     </header>
     <%= yield %>
     <!-- <footer> -->
