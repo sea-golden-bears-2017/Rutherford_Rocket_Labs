@@ -3,7 +3,14 @@ class OrdersController < ApplicationController
   end
 
   def create
-    redirect_to home_path
+    order = Order.new(orders_params)
+    order.employee = employee_logged_in
+    if order.save
+      redirect_to new_part_path
+    else
+      @errors = order.errors.full_messages
+      render :new
+    end
   end
 
   def show
@@ -11,4 +18,9 @@ class OrdersController < ApplicationController
 
   def new
   end
+
+  private
+    def orders_params
+      params.require(:order).permit(:description, :warehouse_id)
+    end
 end
