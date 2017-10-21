@@ -12,7 +12,7 @@ def new
 end
 
 def create
-  if create_parts == nil
+  if quantity_zero?
     flash[:notice] = "Please enter valid quantities"
     render :new
   else

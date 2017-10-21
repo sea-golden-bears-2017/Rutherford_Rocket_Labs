@@ -1,25 +1,13 @@
 <section id="new-parts-page">
-  <%= form_for :order, url: parts_path do |f| %>
+  <%= form_for :order, url: parts_path, html: {class: 'new-parts-form'} do |f| %>
   <h2>Parts Order Form</h2>
-
   <%= render '/layouts/flash' %>
 
   <ul class="new-parts-ul">
-    <li>
-      <%= f.label "Part Number" %>
-      <select class="" name="part_desc[]">
-        <% Part.number_and_name.each do |part| %>
-        <option value="<%= part %>"> <%= part %> </option>
-        <% end %>
-      </select>
-      <%= f.label "Quantity"%>
-      <input class="part-quantity" type="text" name="quantity[]" value="">
-    </li>
-
-
+    <%= render 'new_line' %>
   </ul>
-  <%= f.submit "Add New Line", class: 'submit-button' %>
-  <button class = "submit-button" type="button" name="button">Add New Line</button>
 
+  <%= f.submit "Add New Line", class: 'submit-button new-part' %>
+  <%= f.submit "Place Order", class: 'submit-button' %>
   <% end %>
 </section><!-- end new order page -->

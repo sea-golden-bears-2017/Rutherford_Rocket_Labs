@@ -22,4 +22,5 @@ Rails.application.routes.draw do
 
   #orders routes
   get '/order/:id/confirmation', to: 'orders#confirmation', as: 'affirm'
+
 end
