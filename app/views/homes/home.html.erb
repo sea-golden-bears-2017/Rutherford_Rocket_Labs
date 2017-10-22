@@ -2,7 +2,9 @@
 <section id='homepage'>
   <div id="homepage-container">
     <% if !flash.empty? %>
-    <p><%= flash[:notice] %></p>  
+    <div class="flash">
+      <p style="color: green;"><%= flash[:notice] %></p>
+    </div>
     <% end %>
     <h1>Inventory Management Portal</h1>
       <% if manager_logged_in? %>

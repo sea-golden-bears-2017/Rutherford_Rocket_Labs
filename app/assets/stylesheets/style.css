@@ -617,3 +617,10 @@ footer {
   font-size: .9em;
 }
 /* end footer styles */
+
+.flash {
+  padding: 25px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
