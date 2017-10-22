@@ -1,55 +1,13 @@
 <section id="new-parts-page">
-  <%= form_for :order, url: parts_path do |f| %>
+  <%= form_for :part, url: parts_path, html: {class: 'new-parts-form'} do |f| %>
   <h2>Parts Order Form</h2>
-
-  <%= render 'layouts/flash', layout: false  %>
-  <input type="text" name="" value=" <%= @order %> ">
+  <%= render '/layouts/flash' %>
 
   <ul class="new-parts-ul">
-    <li>
-      <%= f.label "Part Number" %>
-      <select class="" name="part_desc[]">
-        <% Part.number_and_name.each do |part| %>
-        <option value="<%= part %>"> <%= part %> </option>
-        <% end %>
-      </select>
-      <%= f.label "Quantity"%>
-      <input class="part-quantity" type="text" name="quantity[]" value="">
-    </li>
-    <li>
-      <%= f.label "Part Number" %>
-      <select class="" name="part_desc[]">
-        <% Part.number_and_name.each do |part| %>
-        <option value="<%= part %>"> <%= part %> </option>
-        <% end %>
-      </select>
-      <%= f.label "Quantity"%>
-      <input class="part-quantity" type="text" name="quantity[]" value="">
-    </li>
-    <li>
-      <%= f.label "Part Number" %>
-      <select class="" name="part_desc[]">
-        <% Part.number_and_name.each do |part| %>
-        <option value="<%= part %>"> <%= part %> </option>
-        <% end %>
-      </select>
-      <%= f.label "Quantity"%>
-      <input class="part-quantity" type="text" name="quantity[]" value="">
-    </li>
-    <li>
-      <%= f.label "Part Number" %>
-      <select class="" name="part_desc[]">
-        <% Part.number_and_name.each do |part| %>
-        <option value="<%= part %>"> <%= part %> </option>
-        <% end %>
-      </select>
-      <%= f.label "Quantity"%>
-      <input class="part-quantity" type="text" name="quantity[]" value="">
-    </li>
-
-    <%= f.submit "Add New Line", class: 'submit-button' %>
-    <%= f.submit "Place Order", class: 'submit-button' %>
+    <%= render 'new_line' %>
   </ul>
 
+  <%= link_to "Add New Line", new_line_path, class: 'new-part' %>
+  <%= f.submit "Place Order", class: 'submit-button' %>
   <% end %>
 </section><!-- end new order page -->
