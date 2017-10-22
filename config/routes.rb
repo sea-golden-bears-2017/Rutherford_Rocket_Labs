@@ -24,5 +24,5 @@ Rails.application.routes.draw do
   get '/order/:id/confirmation', to: 'orders#confirmation', as: 'affirm'
 
   #parts routes
-  get '/parts/:id/remove', to: "parts#remove", as:"remove"
+  put '/parts/:id/remove', to: "parts#remove", as:"remove"
 end
