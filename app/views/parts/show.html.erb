@@ -1,5 +1,8 @@
 
 <section id = "part-show-page">
+  <% if @parts[0] == nil %>
+    <h3>nothing to show</h3>
+  <% else %>
 <h3> <%= @parts[0].part_no %>: <%= @parts[0].name.capitalize %> </h3>
   <table >
     <thead>
@@ -10,16 +13,16 @@
       <th>Location</th>
       <th>Remove</th>
     </tr>
-    <% @parts.each do |part| %>
+    <% @parts.joins(:warehouse).merge(Warehouse.order(:location_code)).each do |part| %>
       <tr>
         <td><%=part.id%></td>
         <td><%=part.part_no%></td>
         <td><%= part.name.capitalize %></td>
         <td><%= part.warehouse.location_code %></td>
-        <td><%= link_to "remove"%>  </td>
+        <td><%= link_to "remove", remove_path(part)%></td>
       </tr>
     <% end %>
   </table>
+  <% end %>
   <%= link_to "Back", parts_url %>
-
 </section>

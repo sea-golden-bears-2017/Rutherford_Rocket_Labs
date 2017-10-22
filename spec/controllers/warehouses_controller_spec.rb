@@ -29,6 +29,10 @@ RSpec.describe WarehousesController, type: :controller do
       post :create, params: {warehouse: {city: "Saturn"}}
       expect(response).to redirect_to confirmation_path(Warehouse.last)
     end
+    it 'fails to create a warehouse and renders :new' do
+      post :create, params: {warehouse: {city: nil}}
+      expect(response).to render_template(:new)
+    end
   end
 
   context "GET warehouse#confirmation" do

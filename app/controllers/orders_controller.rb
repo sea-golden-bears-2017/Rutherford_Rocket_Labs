@@ -7,6 +7,7 @@ class OrdersController < ApplicationController
     order = Order.new(orders_params)
     order.employee = employee_logged_in
     if order.save
+      flash.clear
       redirect_to new_part_path
     else
       @errors = order.errors.full_messages
