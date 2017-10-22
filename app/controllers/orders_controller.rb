@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   def index
-    @orders = Order.full_orders
+    @orders = full_orders
   end
 
   def create
