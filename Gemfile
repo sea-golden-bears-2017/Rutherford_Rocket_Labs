@@ -50,6 +50,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'poltergeist'
   gem 'database_cleaner'
+  gem 'rails_real_favicon'
 end
 
 group :development do
