@@ -30,7 +30,7 @@ class OrdersController < ApplicationController
   end
 
   def update
-    # redirect_to parts_confirmation_url
+    
     flash[:notice] = "Your new inventory has been added!"
     redirect_to root_path
   end

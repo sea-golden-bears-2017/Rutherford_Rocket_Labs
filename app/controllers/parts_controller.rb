@@ -1,9 +1,5 @@
 class PartsController < ApplicationController
 
-# def confirmation
-#   render :confirmation
-# end
-
 def index
   if logged_in?
     render :index

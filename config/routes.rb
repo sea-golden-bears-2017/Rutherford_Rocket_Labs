@@ -25,5 +25,4 @@ Rails.application.routes.draw do
 
   #parts routes
   put '/parts/:id/remove', to: "parts#remove", as:"remove"
-  # get '/parts/:id/confirmation', to: "parts#confirmation", as: "parts_confirmation"
 end
