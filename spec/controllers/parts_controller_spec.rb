@@ -65,6 +65,10 @@ RSpec.describe PartsController, type: :controller do
       post :remove, params: {id: part.id}
       expect(response.status).to eq 200
     end
+    it 'sets the boolean removed to be true if successful' do
+      session[:user_id] = employee.id
+      expect {put :remove, params: {id: part.id}}.to change {Part.find(part.id).removed}.to true
+    end
   end
 
 
