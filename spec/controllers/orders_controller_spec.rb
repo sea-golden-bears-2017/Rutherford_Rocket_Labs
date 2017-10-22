@@ -23,6 +23,12 @@ describe OrdersController, type: :controller do
       get :index
       expect(Order.all.last).to eq order
     end
+    it 'returns a status of 200' do
+      get :index
+    end
+    it 'renders the :index template'
+    get :index
+    expect(response).to render_template :index
   end
 
   context "GET orders#index"
