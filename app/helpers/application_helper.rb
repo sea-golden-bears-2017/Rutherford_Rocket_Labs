@@ -68,9 +68,7 @@ def update_parts
         parts[number].received_by_id = employee_logged_in.id
         parts[number].save
       end
-      p "*" * 50
 
-      p order_difference[index]
       order_difference[index].times { Part.create(part_no: parts[0].part_no, name: parts[0].name, received_by_id: employee_logged_in.id, order: find_order, warehouse: find_order.warehouse) }
     end
   end
