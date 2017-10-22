@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RutherfordInventory</title>
+    <title>Rutherford Rocket Labs | Science Technology Engineering Math</title>
     <%= csrf_meta_tags %>
-
+    <%= favicon_link_tag 'favicon.ico' %>
     <%= stylesheet_link_tag    'style', media: 'all' %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
   </head>
 
   <body>
     <header>
+      <% unless current_page?(login_path) %>
       <div class="banner-logo">
+        <h4>
+          <a href="/home">
+            Rutherford<span>Rocket</span>Labs
+          </a>
+        </h4>
         <h1 id="main-logo">
           <a href="/home">
-            <%= image_tag "rutherford-rockets.png" %>
+            <%= image_tag "rutherford-rockets-logo.svg" %>
           </a>
         </h1>
+        <% end %>
       </div><!-- end banner logo -->
       <nav id="layout-header">
         <% if !logged_in? %>
@@ -28,23 +36,11 @@
               Hello, <%= employee_logged_in.first_name %> |
             </li>
             <li>
-              <%= button_to "Logout", {action: "destroy", controller: "sessions"}, {method: :delete, class: "logout"} %>
+              <%= button_to " Logout", {action: "destroy", controller: "sessions"}, {method: :delete, class: "logout"} %>
             </li>
           </ul>
-          <% if manager_logged_in? %>
-          <nav id="manager-nav">
-            <ul>
-              <li>
-                <%= link_to "Add Employee", new_employee_path %>
-              </li>
-              <li>
-                <%= link_to "Add Warehouse", new_warehouse_path %>
-              </li>
-            </ul>
-          </nav>
-          <% end %>
       </nav>
-        <% end %>
+      <% end %><!-- end unless -->
     </header>
     <%= yield %>
     <!-- <footer> -->
