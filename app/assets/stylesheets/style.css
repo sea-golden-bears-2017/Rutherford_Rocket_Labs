@@ -496,6 +496,7 @@ font-family: 'Slabo 27px', serif;
 /* end new employee-page styles */
 
 /* warehouse styles */
+
 #warehouse-new-page {
   margin-top: 14em;
 }
@@ -550,15 +551,21 @@ font-family: 'Slabo 27px', serif;
   color: #000;
 }
 
+#order-confirm h3 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 #order-confirm {
   width: 600px;
   margin: 0 auto;
   border: 1px solid gray;
   padding: 1.25em;
+  font-size: 1.3em;
 }
 
 #order-confirm p {
-  font-size: 1.6em;
+  font-size: 1em;
   color: green;
   margin-bottom: 1.2em;
 }
@@ -571,7 +578,7 @@ font-family: 'Slabo 27px', serif;
   color: #c62128;
 }
 
-.order-table,
+/*.order-table,
 .order-table-parts {
   border-collapse: separate;
   border-spacing: .5em;
@@ -579,7 +586,7 @@ font-family: 'Slabo 27px', serif;
 
 .order-table-parts td.quantity {
   text-align: center;
-}
+}*/
 /*end order styles */
 
 /* parts styles */
@@ -604,7 +611,6 @@ font-family: 'Slabo 27px', serif;
 #new-parts-page select {
   font-family: 'Space Mono', monospace;
   font-size: 1.6em;
-  border-radius: 0;
 }
 
 #new-order-page label,
@@ -716,19 +722,21 @@ font-family: 'Slabo 27px', serif;
 
 /* inventory show table styles*/
 #part-show-page {
-  width: 70%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
 
 #part-show-page h3 {
   color: #000;
-  margin-left: 200px;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 1.5em;
+  margin-bottom: 2em;
 }
 
 #part-show-page table {
   text-align: left;
-  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -738,8 +746,24 @@ font-family: 'Slabo 27px', serif;
   font-size: 1.2em;
 }
 
+#part-show-page th {
+  font-family: 'Oswald', sans-serif;
+  background-color: #c62128;
+  height: 60px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.3em;
+}
+
 #part-show-page td {
   width: 300px;
+  height: 50px;
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+}
+
+#part-show-page a {
+  color: #000;
 }
 
 #part-show-page tr:nth-child(even) {
@@ -849,6 +873,8 @@ font-family: 'Slabo 27px', serif;
 }
 
 /*end inventory table styles*/
+
+
 /* inventory show table styles*/
 #order-show-page {
   width: 70%;
@@ -865,10 +891,12 @@ font-family: 'Slabo 27px', serif;
   margin-left: auto;
   margin-right: auto;
 }
+
 #order-show-page tr {
   height: 25px;
   font-size: 1.2em;
 }
+
 #order-show-page td {
   width: 300px;
 }
@@ -881,7 +909,86 @@ font-family: 'Slabo 27px', serif;
 #order-show-page tr:nth-child(odd) {
   background-color: gainsboro;
 }
+
+#order-confirm h3 {
+  font-size: 1.5em;
+}
+
+#order-confirm tr {
+  font-family: 'Space Mono', monospace;
+}
+
+#order-confirm th {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
+}
 /* end inventory show table styles*/
+
+/* add inventory page */
+
+#add-inventory-page {
+  width: 65%;
+  margin: 0 auto;
+  border: 1px solid;
+  padding: 1.25em;
+}
+
+#add-inventory-page h3 {
+  font-size: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#add-inventory-page tr {
+  font-size: 1.3em;
+  margin-left: 0;
+  text-align: left;
+}
+
+#add-inventory-page td {
+  text-align: right;
+}
+
+.order-table-parts tr th {
+  height: 50px;
+  background-color: #c62128;
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  text-align: center;
+  width: 25%;
+}
+
+#add-inventory-page tr:nth-child(even) {
+  background-color: white;
+}
+
+#add-inventory-page tr:nth-child(odd) {
+  background-color: gainsboro;
+}
+
+#add-inventory-page tr th {
+  height: 60px;
+  width: 30%;
+  font-family: 'Oswald', sans-serif;
+}
+
+#add-inventory-page tr td {
+  height: 60px;
+  color: #000;
+  text-align: center;
+  font-family: 'Space Mono', monospace;
+}
+
+.order-table-parts tr th {
+  color: #fff;
+}
+
+.order-table-parts tr {
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+}
+
+/* end add inventory page */
 
 /* all table styles */
 
@@ -918,6 +1025,11 @@ footer {
 .flash {
   padding: 25px;
   border: 1px solid grey;
-  border-radius: 10px;
   margin-bottom: 50px;
+}
+
+.back-button {
+  font-family: 'Space Mono', monospace;
+  color: #000;
+  font-size: 1.3em;
 }

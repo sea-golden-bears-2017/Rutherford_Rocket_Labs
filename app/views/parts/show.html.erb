@@ -1,5 +1,5 @@
 
-<section id = "part-show-page">
+<section id="part-show-page">
   <% if @parts[0] == nil %>
     <h3>nothing to show</h3>
   <% else %>
@@ -24,5 +24,5 @@
     <% end %>
   </table>
   <% end %>
-  <%= link_to "Back", parts_url %>
+  <%= link_to "Back", parts_url,  class: 'back-button' %>
 </section>

@@ -1,43 +1,41 @@
 <h3>Receive Order Shipment</h3>
-<table>
-  <tr>
-    <th>Order Description: </th>
-    <td> <%= @order.description %> </td>
-    <tr>
-      <th>Order Name: </th>
-      <td> <%= @order.order_name %> </td>
-    </tr>
-  </tr>
-  <th>Warehouse: </th>
-  <td> <%= @order.warehouse.location_code %> </td>
-</tr>
-<tr>
-</table>
-
-<h3>Part Summary</h3>
-<% if !flash.empty? %>
-<div class="flash">
-  <p style="color: red;"><%= flash[:alert] %></p>
-</div>
-<% end %>
-<table class='order-table-parts'>
-<tr>
-<th>Part Number</th>
-<th>Part Name</th>
-<th>Order Quantity</th>
-<th>Quantity Received</th>
-</tr>
-<tr><%= form_for(@order) do |f| %>
-  <% @order.unique_parts.each do |part| %>
-<td> <%= part[0] %> </td>
-<td> <%= part[1] %> </td>
-<td class='quantity'> <%= @order.part_count(part) %> </td>
-<td>
-      <input class="part-quantity" type="text" name="quantity_received[]" value="">
-
-</td>
-</tr>
-<% end %>
-</table>
-<input type="submit" name="" value="Add Inventory" class='submit-button'>
+  <table>
+      <tr>
+        <th>Order Description: </th>
+            <td> <%= @order.description %> </td>
+                <tr>
+                  <th>Order Name: </th>
+                    <td> <%= @order.order_name %> </td>
+                </tr>
+              </tr>
+              <th>Warehouse: </th>
+                <td> <%= @order.warehouse.location_code %> </td>
+              </tr>
+              <tr>
+              </table>
+              <h3>Part Summary</h3>
+                <% if !flash.empty? %>
+                  <div class="flash">
+                    <p style="color: red;"><%= flash[:alert] %></p>
+                  </div>
+                <% end %>
+              <table class='order-table-parts'>
+              <tr>
+                <th>Part Number</th>
+                <th>Part Name</th>
+                <th>Order Quantity</th>
+                <th>Received Quantity</th>
+              </tr>
+              <tr><%= form_for(@order) do |f| %>
+                  <% @order.unique_parts.each do |part| %>
+                    <td> <%= part[0] %> </td>
+                    <td> <%= part[1] %> </td>
+                <td class='quantity'> <%= @order.part_count(part) %> </td>
+              <td>
+            <input class="part-quantity" type="text" name="quantity_received[]" value="">
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  <input class="submit-button" type="submit" name="" value="Add Inventory">
 <% end %>
