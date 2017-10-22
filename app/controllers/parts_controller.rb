@@ -24,6 +24,10 @@ def create
   end
 end
 
+def new_line
+  render '_new_line', layout: false
+end
+
 def show
   if logged_in?
     part = Part.find(params[:id])
@@ -32,6 +36,7 @@ def show
     redirect_to '/'
   end
 end
+
 
 private
 

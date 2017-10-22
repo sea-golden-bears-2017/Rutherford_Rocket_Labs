@@ -1,5 +1,5 @@
 <section id="new-parts-page">
-  <%= form_for :order, url: parts_path, html: {class: 'new-parts-form'} do |f| %>
+  <%= form_for :part, url: parts_path, html: {class: 'new-parts-form'} do |f| %>
   <h2>Parts Order Form</h2>
   <%= render '/layouts/flash' %>
 
@@ -7,7 +7,7 @@
     <%= render 'new_line' %>
   </ul>
 
-  <%= f.submit "Add New Line", class: 'submit-button new-part' %>
+  <%= link_to "Add New Line", new_line_path, class: 'new-part' %>
   <%= f.submit "Place Order", class: 'submit-button' %>
   <% end %>
 </section><!-- end new order page -->

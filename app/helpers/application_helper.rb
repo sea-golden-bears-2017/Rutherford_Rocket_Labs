@@ -21,7 +21,7 @@ module ApplicationHelper
   end
 
   def create_parts
-    generate_part_objects
+    generate_part_objects(extract_part_information, Order.last)
   end
 
 private
@@ -36,8 +36,8 @@ private
   end
 end
 
-def generate_part_objects
+def generate_part_objects(parts, order)
   quantities.count.times do |number|
-    quantities[number].times {Part.create(part_no: extract_part_information[number][0], name: extract_part_information[number][1], warehouse: Order.last.warehouse, order: Order.last, removed: false)}
+    quantities[number].times {Part.create(part_no: parts[number][0], name: parts[number][1], warehouse: order.warehouse, order: order, removed: false)}
   end
 end
