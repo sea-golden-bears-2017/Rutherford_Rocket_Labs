@@ -496,6 +496,7 @@ font-family: 'Slabo 27px', serif;
 /* end new employee-page styles */
 
 /* warehouse styles */
+
 #warehouse-new-page {
   margin-top: 14em;
 }
@@ -716,19 +717,21 @@ font-family: 'Slabo 27px', serif;
 
 /* inventory show table styles*/
 #part-show-page {
-  width: 70%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
 
 #part-show-page h3 {
   color: #000;
-  margin-left: 200px;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 1.5em;
+  margin-bottom: 2em;
 }
 
 #part-show-page table {
   text-align: left;
-  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -738,8 +741,24 @@ font-family: 'Slabo 27px', serif;
   font-size: 1.2em;
 }
 
+#part-show-page th {
+  font-family: 'Oswald', sans-serif;
+  background-color: #c62128;
+  height: 60px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.3em;
+}
+
 #part-show-page td {
   width: 300px;
+  height: 50px;
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+}
+
+#part-show-page a {
+  color: #000;
 }
 
 #part-show-page tr:nth-child(even) {
@@ -867,10 +886,12 @@ font-family: 'Slabo 27px', serif;
   margin-left: auto;
   margin-right: auto;
 }
+
 #order-show-page tr {
   height: 25px;
   font-size: 1.2em;
 }
+
 #order-show-page td {
   width: 300px;
 }
@@ -1001,4 +1022,10 @@ footer {
   border: 1px solid grey;
   border-radius: 10px;
   margin-bottom: 50px;
+}
+
+.back-button {
+  font-family: 'Space Mono', monospace;
+  color: #000;
+  font-size: 1.3em;
 }
