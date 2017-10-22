@@ -807,10 +807,19 @@ font-family: 'Slabo 27px', serif;
 
 #order-index-page td {
   width: 300px;
+  height: 55px;
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+  font-size: 1.1em;
 }
 
 #order-index-page th {
   background-color: #c62128;
+  height: 50px;
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6em;
 }
 
 #order-index-page tr {
