@@ -32,9 +32,12 @@ class OrdersController < ApplicationController
 
   def update
     if quantity_received_zero?
+      @order = Order.find(params[:id])
+      flash.alert = "Please enter quantities received"
+      render :edit
     else
+      update_parts
       flash[:notice] = "Your new inventory has been added!"
-      
       redirect_to root_path
     end
   end

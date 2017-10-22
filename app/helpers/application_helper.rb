@@ -33,7 +33,7 @@ def find_order
 end
 
 def order_difference
-  find_difference(quantity_ordered(find_order), quantity_received)
+  find_difference(quantity_received, quantity_ordered(find_order))
 end
 
 def order_part_numbers_only
@@ -46,20 +46,21 @@ end
 
 def update_parts
   order_part_numbers_only.each do |part_no|
-    index = Order.last.parts.index(part_no)
-    parts = find_order.find_by(part_no: part_no)
+    index = order_part_numbers_only.index(part_no)
+    parts = find_order.parts.where(part_no: part_no)
+    # order_difference = find_difference(quantity_received, quantity_ordered(find_order))
 
     if order_difference[index] == 0
 
       parts.each do |part|
-        part.recieved_by_id = employee_logged_in.id
+        part.received_by_id = employee_logged_in.id
         part.save
       end
 
     elsif
       order_difference[index] < 0
-
       quantity_received[index].times do |number|
+        find_order.parts
         parts[number].received_by_id = employee_logged_in.id
         parts[number].save
       end
@@ -69,6 +70,9 @@ def update_parts
         parts[number].received_by_id = employee_logged_in.id
         parts[number].save
       end
+      p "*" * 50
+
+      p order_difference[index]
       order_difference[index].times { Part.create(part_no: parts[0].part_no, name: parts[0].name, received_by_id: employee_logged_in.id, order: find_order, warehouse: find_order.warehouse) }
     end
   end
@@ -107,6 +111,6 @@ def quantity_ordered(order)
   end
 end
 
-def find_difference(ordered, received)
-  ordered.zip(received).map{ |o, r| o - r }
+def find_difference(received, ordered)
+  received.zip(ordered).map{ |r, o| r - o }
 end
