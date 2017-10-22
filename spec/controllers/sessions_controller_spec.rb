@@ -27,6 +27,14 @@ describe SessionsController, type: :controller do
         post :create, { params: {employee_id: 1, password: "flamingo"} }
         expect(session[:user_id]).to be nil
       end
+      it 'returns a status of 302 when destory route is called' do
+        delete :destroy
+        expect(response.status).to be 302
+      end
+      it ':user_id is cleared when destroy route is called' do
+        delete :destroy
+        expect(session).to be_empty 
+      end
     end
   end
 end
