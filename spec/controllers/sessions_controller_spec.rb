@@ -33,8 +33,13 @@ describe SessionsController, type: :controller do
       end
       it ':user_id is cleared when destroy route is called' do
         delete :destroy
-        expect(session).to be_empty 
+        expect(session).to be_empty
       end
+      it 'returns a status of 200 when new route is called' do
+        get :new
+        expect(response.status).to be 200
+      end
+      it 'renders :new template when new route is called'
     end
   end
 end
