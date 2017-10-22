@@ -23,7 +23,7 @@ def create
     redirect_to affirm_path(@order)
   end
 end
-  
+
 def new_line
   render '_new_line', layout: false
 end

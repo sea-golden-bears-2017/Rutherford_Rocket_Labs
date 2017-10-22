@@ -39,27 +39,35 @@ module ApplicationHelper
     find_order.parts.map{ |part| part.part_no }.uniq
   end
 
+def update_parts
   order_part_numbers_only.each do |part_no|
     index = Order.last.parts.index(part_no)
     parts = find_order.find_by(part_no: part_no)
+
     if order_difference[index] == 0
+
       parts.each do |part|
-        part.recieved_by = employee_logged_in
+        part.recieved_by_id = employee_logged_in.id
         part.save
       end
+
     elsif
       order_difference[index] < 0
+
       quantity_received[index].times do |number|
-        parts[number].received_by_id = employee_logged_in
+        parts[number].received_by_id = employee_logged_in.id
         parts[number].save
       end
+
     else
-      quantity_ordered(find_order).times do |number|
-        
+      quantity_ordered(find_order)[index].times do |number|
+        parts[number].received_by_id = employee_logged_in.id
+        parts[number].save
       end
-    end
+      order_difference[index].times { Part.create(part_no: parts[0].part_no, name: parts[0].name, received_by_id: employee_logged_in.id, order: find_order, warehouse: find_order.warehouse) }
     end
   end
+end
 
 
 
@@ -84,9 +92,6 @@ def generate_part_objects(parts, order)
 end
 
 #update order helper methods
-def quantity_received
-  params[:quantity_received].map{ |quantity| quantity.to_i }
-end
 
 def quantity_ordered(order)
   order.unique_parts.map do |part|

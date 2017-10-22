@@ -16,7 +16,4 @@ class Order < ApplicationRecord
     self.parts.where(part_no: part[0]).count
   end
 
-
-
-
 end
