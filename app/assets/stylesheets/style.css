@@ -550,7 +550,6 @@ font-family: 'Slabo 27px', serif;
   width: 400px;
   margin: 0 auto;
   border: 1px solid gray;
-  border-radius: 25px;
   padding: 1.25em;
 }
 
@@ -693,10 +692,6 @@ td {
   width: 300px;
 }
 
-#part-show-page th {
-  background-color: lime;
-}
-
 #part-show-page tr:nth-child(even) {
   background-color: white;
 }
@@ -743,14 +738,18 @@ td {
 /*inventory table styles*/
 
 #order-index-page {
-  width: 70%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
+#order-index-page h1 {
+  font-family: 'Oswald', sans-serif;
+}
+
 #order-index-page table {
   text-align: left;
-  width: 80%;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -760,12 +759,12 @@ td {
 }
 
 #order-index-page th {
-  background-color: lime;
+  background-color: #c62128;
 }
 
 #order-index-page tr {
   height: 25px;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 #order-index-page tr:nth-child(even) {
