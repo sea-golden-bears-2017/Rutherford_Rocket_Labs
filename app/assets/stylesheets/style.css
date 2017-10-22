@@ -571,7 +571,7 @@ font-family: 'Slabo 27px', serif;
   color: #c62128;
 }
 
-.order-table,
+/*.order-table,
 .order-table-parts {
   border-collapse: separate;
   border-spacing: .5em;
@@ -579,7 +579,7 @@ font-family: 'Slabo 27px', serif;
 
 .order-table-parts td.quantity {
   text-align: center;
-}
+}*/
 /*end order styles */
 
 /* parts styles */
@@ -897,6 +897,72 @@ font-family: 'Slabo 27px', serif;
   font-size: 1em;
 }
 /* end inventory show table styles*/
+
+/* add inventory page */
+
+#add-inventory-page {
+  width: 65%;
+  margin: 0 auto;
+  border: 1px solid;
+  padding: 1.25em;
+}
+
+#add-inventory-page h3 {
+  font-size: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#add-inventory-page tr {
+  font-size: 1.3em;
+  margin-left: 0;
+  text-align: left;
+}
+
+#add-inventory-page td {
+  text-align: right;
+}
+
+.order-table-parts tr th {
+  height: 50px;
+  background-color: #c62128;
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  text-align: center;
+  width: 25%;
+}
+
+#add-inventory-page tr:nth-child(even) {
+  background-color: white;
+}
+
+#add-inventory-page tr:nth-child(odd) {
+  background-color: gainsboro;
+}
+
+#add-inventory-page tr th {
+  height: 60px;
+  width: 30%;
+  font-family: 'Oswald', sans-serif;
+}
+
+#add-inventory-page tr td {
+  height: 60px;
+  color: #000;
+  text-align: center;
+  font-family: 'Space Mono', monospace;
+}
+
+.order-table-parts tr th {
+  color: #fff;
+}
+
+.order-table-parts tr {
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+}
+
+/* end add inventory page */
 
 /* all table styles */
 
