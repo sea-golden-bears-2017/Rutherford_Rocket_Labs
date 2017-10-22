@@ -39,7 +39,10 @@ describe SessionsController, type: :controller do
         get :new
         expect(response.status).to be 200
       end
-      it 'renders :new template when new route is called'
+      it 'renders :login template when :new route is called' do
+        get :new
+        expect(response).to render_template :login
+      end
     end
   end
 end
