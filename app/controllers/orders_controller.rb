@@ -26,8 +26,12 @@ class OrdersController < ApplicationController
   end
 
   def edit
+    @order = Order.find(params[:id])
   end
-  
+
+  def update
+  end
+
   private
     def orders_params
       params.require(:order).permit(:description, :warehouse_id)
