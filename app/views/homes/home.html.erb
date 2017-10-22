@@ -6,8 +6,8 @@
       <ul>
         <li><%= link_to "Inventory", parts_path %></li>
         <!-- FIXME Manage Shipment url replace with :new -->
-        <li><%= link_to "Manage Shipment", home_path %></li>
-        <li><%= link_to "Place an Order", home_path %></li>
+        <li><%= link_to "Manage Shipment", orders_path %></li>
+        <li><%= link_to "Place an Order", new_order_path %></li>
       </ul>
     </nav>
     <% if manager_logged_in? %>
@@ -25,6 +25,9 @@
     <% end %>
     <aside class="site-function">
       <h3>How to use this site</h3>
+      <p>Welcome to the Rutherford Rocket Labs Inventory Management Portal. website aims to streamline and
+        automate inventory process, reduce error and increase organization. click inventory to see inventory by locaiton. click manage shipment to view orders and add inventory. click place order to place order.
+      </p>
       <p>
         Each time you use the web portal, you must sign in with your employee number and password. Depending on
         your system configuration, the process for setting up and obtaining them differs. Your department supervisor will assign a randomized numerical value and password
@@ -36,9 +39,6 @@
         different web site without signing out of the web portal, your web portal session remains in effect for
         several minutes. If someone else uses your computer, they might be able to access your system without
         you knowing.
-      </p>
-        Navigation Specifications
-      <p>
       </p>
     </aside><!-- end site function -->
   </div>
