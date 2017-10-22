@@ -48,10 +48,10 @@ RSpec.describe PartsController, type: :controller do
   end
 
   context "GET parts#show" do
-    # it "responds with status code 302 if logged_in? is false" do
-    #   get :show
-    #   expect(response.status).to eq 302
-    # end
+    it "responds with status code 302 if logged_in? is false" do
+      get :show, params: {id: part.id}
+      expect(response.status).to eq 302
+    end
     it "responds with status code 200 if logged_in? is true" do
       session[:user_id] = employee.id
       get :show, params: {id: part.id}
