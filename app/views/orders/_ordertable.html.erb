@@ -6,14 +6,14 @@
       <th>Order Number</th>
       <th>Description</th>
       <th>Warehouse</th>
-      <th>View</th>
+      <th>Add Received Shipment</th>
     </tr>
     <% orders.each do |o| %>
     <tr>
       <td> <%= o.order_name %> </td>
       <td> <%= o.description %> </td>
       <td> <%= o.warehouse.city %> </td>
-      <td>  <%= link_to "View", order_path(o) %> </td>
+      <td>  <%= link_to "Select", edit_order_path(o) %> </td>
     </tr>
     <% end %>
   </table>

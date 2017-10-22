@@ -25,6 +25,9 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
+  def edit
+  end
+  
   private
     def orders_params
       params.require(:order).permit(:description, :warehouse_id)
