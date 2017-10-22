@@ -58,16 +58,4 @@ RSpec.describe PartsController, type: :controller do
       expect(response.status).to eq 200
     end
   end
-
-
-
-
-
-
-
-
-
-
-
-  context "GET parts#create"
 end
