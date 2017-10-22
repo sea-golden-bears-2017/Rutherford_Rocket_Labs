@@ -16,19 +16,13 @@ module ApplicationHelper
     Employee.find(session[:user_id])
   end
 
+  def quantity_zero?
+    return quantities.inject(0){ |sum, q| sum + q } == 0
+  end
+
   def create_parts
-    order = Order.last
-    warehouse = order.warehouse
-    parts = extract_part_information
-    quantities.count.times do |number|
-      quantities[number].times {Part.create(part_no: parts[number][0], name: parts[number][1], warehouse: warehouse, order: order, removed: false)}
-    end
+    generate_part_objects(extract_part_information, Order.last)
   end
-
-  def count_parts(order, part)
-    order.parts.where(name: part.name).count
-  end
-
 
 private
   def extract_part_information
@@ -39,5 +33,11 @@ private
 
   def quantities
     params[:quantity].map{ |quantity| quantity.to_i }
+  end
+end
+
+def generate_part_objects(parts, order)
+  quantities.count.times do |number|
+    quantities[number].times {Part.create(part_no: parts[number][0], name: parts[number][1], warehouse: order.warehouse, order: order, removed: false)}
   end
 end

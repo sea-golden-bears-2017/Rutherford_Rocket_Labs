@@ -13,7 +13,7 @@ gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+# gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -23,12 +23,13 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'coffee-rails', '~> 4.2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-gem 'bootstrap-sass'
-gem 'font-awesome-sass', '~> 4.5.0'
+# gem 'bootstrap-sass'
+# gem 'font-awesome-sass', '~> 4.5.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -49,6 +50,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'poltergeist'
   gem 'database_cleaner'
+  gem 'rails_real_favicon'
 end
 
 group :development do

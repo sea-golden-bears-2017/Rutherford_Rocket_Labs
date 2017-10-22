@@ -1,7 +1,7 @@
 
 
 
-  <table>
+  <table class="all-parts">
     <thead>
     <tr>
       <th>Part Number</th>
@@ -14,7 +14,7 @@
         <td><%=part.part_no%></td>
         <td><%= part.name.capitalize %></td>
         <td><%= Part.number_of(part.part_no, warehouse.id) %></td>
-        <td><%= link_to "View", part_path(part)%></td>
+        <td><%= link_to "view", part_path(part)%></td>
       </tr>
     <% end %>
   </table>

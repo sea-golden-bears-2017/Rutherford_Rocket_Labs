@@ -1,3 +1,4 @@
+<h3>Order Summary</h3>
 <tr>
   <th>Order Description: </th>
   <td> <%= @order.description %> </td>
@@ -12,17 +13,17 @@
 <tr>
 
 </table>
-<h3>Parts</h3>
-<table>
+<h3>Part Summary</h3>
+<table class='order-table-parts'>
 <tr>
-<% @order.unique_parts.each do |part| %>
 <th>Part Number</th>
 <th>Part Name</th>
 <th>Quantity</th>
 </tr>
 <tr>
+  <% @order.unique_parts.each do |part| %>
 <td> <%= part[0] %> </td>
 <td> <%= part[1] %> </td>
-<td> <%= @order.part_count(part) %> </td>
+<td class='quantity'> <%= @order.part_count(part) %> </td>
 </tr>
 <% end %>
