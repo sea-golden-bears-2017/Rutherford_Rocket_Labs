@@ -15,5 +15,9 @@ class Order < ApplicationRecord
   def part_count(part)
     self.parts.where(part_no: part[0]).count
   end
+  
+  def self.full_orders
+    Order.all.select{ |order| order.parts.count > 0 }
+  end
 
 end
