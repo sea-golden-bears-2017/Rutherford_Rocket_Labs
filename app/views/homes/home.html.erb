@@ -1,6 +1,11 @@
 
 <section id='homepage'>
   <div id="homepage-container">
+    <% if !flash.empty? %>
+    <div class="flash">
+      <p style="color: green;"><%= flash[:notice] %></p>
+    </div>
+    <% end %>
     <h1>Inventory Management Portal</h1>
     <nav id="main-nav">
       <ul>
