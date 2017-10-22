@@ -31,10 +31,12 @@ class OrdersController < ApplicationController
   end
 
   def update
-    p "*" * 50
-    4/0
-    flash[:notice] = "Your new inventory has been added!"
-    redirect_to root_path
+    if quantity_received_zero?
+    else
+      flash[:notice] = "Your new inventory has been added!"
+      
+      redirect_to root_path
+    end
   end
 
   private

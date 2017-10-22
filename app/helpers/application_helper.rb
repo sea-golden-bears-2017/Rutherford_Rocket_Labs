@@ -21,23 +21,28 @@ module ApplicationHelper
     return quantities.inject(0){ |sum, q| sum + q } == 0
   end
 
+
   def create_parts
     generate_part_objects(extract_part_information, Order.last)
   end
 
 # order update helper methods
 
-  def find_order
-    Order.find(params[:id])
-  end
+def find_order
+  Order.find(params[:id])
+end
 
-  def order_difference
-    find_difference(quantity_ordered(find_order), quantity_received)
-  end
+def order_difference
+  find_difference(quantity_ordered(find_order), quantity_received)
+end
 
-  def order_part_numbers_only
-    find_order.parts.map{ |part| part.part_no }.uniq
-  end
+def order_part_numbers_only
+  find_order.parts.map{ |part| part.part_no }.uniq
+end
+
+def quantity_received_zero?
+  return quantity_received.inject(0){ |sum, q| sum + q } == 0
+end
 
 def update_parts
   order_part_numbers_only.each do |part_no|
@@ -92,6 +97,9 @@ def generate_part_objects(parts, order)
 end
 
 #update order helper methods
+def quantity_received
+  params[:quantity_received].map{ |quantity| quantity.to_i }
+end
 
 def quantity_ordered(order)
   order.unique_parts.map do |part|
