@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :employees, only: [:new, :create, :confirmation]
   resources :warehouses, only: [:new, :create, :confirmation]
-  resources :parts, only: [:index, :create, :show, :new, :new_line]
+  resources :parts, only: [:index, :create, :show, :new, :new_line, :remove]
   resources :orders, only: [:index, :new, :create, :show, :confirmation]
 
   root to: 'homes#show'
@@ -25,5 +25,6 @@ Rails.application.routes.draw do
 
   #parts routes
   get '/new_line', to: 'parts#new_line', as: 'new_line'
+  get '/parts/:id/remove', to: "parts#remove", as:"remove"
 
 end
