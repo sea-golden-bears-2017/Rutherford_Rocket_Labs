@@ -9,7 +9,7 @@ class Part < ApplicationRecord
   end
 
   def self.number_of(part_no, warehouse_id)
-    Part.where(part_no: part_no, warehouse_id: warehouse_id).count
+    Part.where(removed: false, part_no: part_no, warehouse_id: warehouse_id).count
   end
 
   def self.unique_parts_in_inventory(warehouse_id)
@@ -19,7 +19,5 @@ class Part < ApplicationRecord
   def self.number_and_name
     Part.all.map { |part| "#{part.part_no}-#{part.name.capitalize}" }.uniq
   end
-
-
 
 end
