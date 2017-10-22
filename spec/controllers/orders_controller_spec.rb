@@ -41,12 +41,14 @@ describe OrdersController, type: :controller do
       get :show, params: {id: order.id}
       expect(assigns(:order)).to eq Order.find(order.id)
     end
-    # it "returns a status of 200" do
-    #   get :show, params: {id: order.id}
-    # end
-    # it "renders the :index template" do
-    #   get :show, params: {id: order.id}
-    # end
+    it "returns a status of 200" do
+      get :show, params: {id: order.id}
+      expect(response.status).to be 200
+    end
+    it "renders the :index template" do
+      get :show, params: {id: order.id}
+      expect(response).to render_template :show
+    end
   end
 
   context "GET orders#edit" do
