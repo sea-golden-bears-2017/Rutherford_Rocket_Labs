@@ -31,13 +31,9 @@ RSpec.describe PartsController, type: :controller do
   context "POST parts#create" do
     it 'creates a new part' do
       post :create, params: {quantity: [1], part_desc: ["86951-Fan"]}
-      # p "*" * 100
-      # p part
-      # p Part.last
       expect(Part.last.name).to eq "Fan"
     end
-    # it 'responds with a status code of 200 if parts create_parts = nil'
-    # it 'responds with a status code of 302 if parts create_parts is not nil'
+    it 'renders the :new '
   end
 
 
