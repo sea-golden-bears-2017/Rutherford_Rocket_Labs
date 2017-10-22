@@ -849,6 +849,8 @@ font-family: 'Slabo 27px', serif;
 }
 
 /*end inventory table styles*/
+
+
 /* inventory show table styles*/
 #order-show-page {
   width: 70%;
@@ -880,6 +882,19 @@ font-family: 'Slabo 27px', serif;
 }
 #order-show-page tr:nth-child(odd) {
   background-color: gainsboro;
+}
+
+#order-confirm h3 {
+  font-size: 1.5em;
+}
+
+#order-confirm tr {
+  font-family: 'Space Mono', monospace;
+}
+
+#order-confirm th {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
 }
 /* end inventory show table styles*/
 
