@@ -39,6 +39,19 @@ RSpec.describe PartsController, type: :controller do
     end
   end
 
+  context "GET parts#new_line" do
+    it 'renders the _new_line partial' do
+      get :new_line
+      expect(response).to render_template :_new_line
+    end
+  end
+
+
+
+
+
+
+
 
 
 
