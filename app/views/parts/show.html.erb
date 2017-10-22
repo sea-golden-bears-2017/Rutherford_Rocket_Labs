@@ -21,7 +21,7 @@
         <td><%= part.warehouse.location_code %></td>
         <td><%= link_to "Remove" %>  </td>
         <% if manager_logged_in? %>
-          <td><%= link_to "Transfer", edit_part_url %> </td>
+          <td><%= link_to "Transfer", edit_part_path(part) %> </td>
         <% end %>
       </tr>
     <% end %>
