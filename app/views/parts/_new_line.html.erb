@@ -2,9 +2,9 @@
   <label for="">Part Number</label>
   <select class="" name="part_desc[]">
     <% Part.number_and_name.each do |part| %>
-    <option value="<%= part %>"> <%= part %> </option>
+    <option value="<%= part %>"> <%= part %></option>
     <% end %>
   </select>
-  <label for="">Quantity</label>
+  <label class="part-quantity" for="">Quantity</label>
   <input class="part-quantity" type="text" name="quantity[]" value="">
 </li>
