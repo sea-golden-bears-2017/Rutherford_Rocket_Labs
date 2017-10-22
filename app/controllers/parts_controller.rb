@@ -12,15 +12,20 @@ def new
 end
 
 def create
-  if create_parts == nil
+  if quantity_zero?
     flash[:notice] = "Please enter valid quantities"
     render :new
   else
     @order = Order.last
     create_parts
     @parts = @order.parts
+    flash.clear
     redirect_to affirm_path(@order)
   end
+end
+
+def new_line
+  render '_new_line', layout: false
 end
 
 def show
@@ -32,14 +37,6 @@ def show
   end
 end
 
-def remove
-  part = Part.find(params[:id])
-  part.removed = true
-  part.removed_by_id = employee_logged_in.id
-  part.save
-  @parts = Part.all_of_type_in_inventory(part.part_no)
-  render :show
-end
 
 private
 
