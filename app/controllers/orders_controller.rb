@@ -30,6 +30,7 @@ class OrdersController < ApplicationController
   end
 
   def update
+    4/0
   end
 
   private
