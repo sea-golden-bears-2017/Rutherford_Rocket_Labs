@@ -7,27 +7,44 @@
     </div>
     <% end %>
     <h1>Inventory Management Portal</h1>
-      <% if manager_logged_in? %>
-        <nav id="main-nav-manager">
-          <ul>
-            <li><%= link_to "Inventory", parts_path %></li>
-            <!-- FIXME Manage Shipment url replace with :new -->
-            <li><%= link_to "Manage Shipment", orders_path %></li>
-            <!-- FIXME Place Order url replace with :new / new_order_path? -->
-            <li><%= link_to "Place Order", new_order_path %></li>
-          </ul>
-        </nav>
-      <% else %>
-        <nav id="main-nav-employee">
-          <ul>
-            <li><%= link_to "Inventory", parts_path %></li>
-            <!-- FIXME Manage Shipment url replace with :new -->
-            <li><%= link_to "Manage Shipment", orders_path %></li>
-          </ul>
-        </nav>
-      <% end %>
-
-    <h2>How to use this site</h2>
-    <p>Welcome to the Rutherford Rocket Labs Inventory Management Portal. website aims to streamline and automate inventory process, reduce error and increase organization. click inventory to see inventory by locaiton. click manage shipment to view orders and add inventory. click place order to place order.</p>
+    <nav id="main-nav">
+      <ul>
+        <li><%= link_to "Inventory", parts_path %></li>
+        <!-- FIXME Manage Shipment url replace with :new -->
+        <li><%= link_to "Manage Shipment", orders_path %></li>
+        <li><%= link_to "Place an Order", new_order_path %></li>
+      </ul>
+    </nav>
+    <% if manager_logged_in? %>
+    <h2>For Managers</h2>
+    <nav id="manager-nav">
+      <ul>
+        <li>
+          <%= link_to "Add Employee", new_employee_path %>
+        </li>
+        <li>
+          <%= link_to "Add Warehouse", new_warehouse_path %>
+        </li>
+      </ul>
+    </nav>
+    <% end %>
+    <aside class="site-function">
+      <h3>How to use this site</h3>
+      <p>Welcome to the Rutherford Rocket Labs Inventory Management Portal. website aims to streamline and
+        automate inventory process, reduce error and increase organization. click inventory to see inventory by locaiton. click manage shipment to view orders and add inventory. click place order to place order.
+      </p>
+      <p>
+        Each time you use the web portal, you must sign in with your employee number and password. Depending on
+        your system configuration, the process for setting up and obtaining them differs. Your department supervisor will assign a randomized numerical value and password
+        to sign in, follow the specific directions provided by your system installer and in any emails
+        you receive associated with this process.
+      </p>
+      <p>
+        When you finish using the web portal, it is important that you explicitly sign out. If you navigate to a
+        different web site without signing out of the web portal, your web portal session remains in effect for
+        several minutes. If someone else uses your computer, they might be able to access your system without
+        you knowing.
+      </p>
+    </aside><!-- end site function -->
   </div>
 </section>
