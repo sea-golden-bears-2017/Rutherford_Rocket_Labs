@@ -468,7 +468,7 @@ font-family: 'Slabo 27px', serif;
 #new-employee-page {
   width: 50%;
   margin: 0 auto;
-
+  border: 1px solid;
   padding: 1.25em;
   color: #000;
 }
@@ -477,7 +477,6 @@ font-family: 'Slabo 27px', serif;
   width: 400px;
   margin: 0 auto;
   border: 1px solid gray;
-
   padding: 1.25em;
 }
 
@@ -497,22 +496,42 @@ font-family: 'Slabo 27px', serif;
 /* end new employee-page styles */
 
 /* warehouse styles */
+#warehouse-new-page {
+  margin-top: 14em;
+}
+
+.warehouse-details {
+  margin-bottom: 1em;
+}
+
+#warehouse-new-page h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.75em;
+}
+
+#warehouse-new-page p {
+  padding-top: .55em;
+  line-height: 1.4em;
+  color: gray;
+  font-family: 'Slabo 27px', serif;
+  font-size: 1.2em;
+}
+
+.new-warehouse-container {
+  width: 700px;
+  border: 1px solid;
+  margin: 0 auto;
+  padding: 1.25em;
+}
 
 #warehouse-new-page h1, h2, h3, label {
   color: #000;
-}
-
-#warehouse-new-page form {
-  width: 50%;
-  padding-top: 10.5em;
-  margin: 0 auto;
 }
 
 #warehouse-confirm {
   width: 400px;
   margin: 0 auto;
   border: 1px solid gray;
-
   padding: 1.25em;
 }
 
@@ -528,14 +547,44 @@ font-family: 'Slabo 27px', serif;
 
 /*inventory table styles*/
 
+#inventory-index-page h1 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#inventory-index-page h3 {
+  font-size: 1.75em;
+  color: #4b4d4f;
+  text-align: center;
+  margin-top: .75em;
+  margin-bottom: .75em;
+}
+
+th {
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  height: 65px;
+  text-align: center;
+  font-size: 1.4em;
+}
+
+td {
+  height: 50px;
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+}
+
 #inventory-index-page {
-  width: 70%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
+
 #inventory-index-page table {
   text-align: left;
-  width: 50%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -545,7 +594,7 @@ font-family: 'Slabo 27px', serif;
 }
 
 #inventory-index-page th {
-  background-color: lime;
+  background-color: #c62128;
 }
 
 #inventory-index-page tr {
@@ -561,14 +610,10 @@ font-family: 'Slabo 27px', serif;
   background-color: gainsboro;
 }
 
-#inventory-index-page h1 {
-  text-align: center;
+#inventory-index-page a {
+  color: #000;
 }
 
-#inventory-index-page h3 {
-  color: #000;
-  margin-left: 200px;
-}
 /*end inventory table styles*/
 
 /* inventory show table styles*/
