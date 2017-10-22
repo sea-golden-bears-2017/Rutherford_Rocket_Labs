@@ -1,5 +1,9 @@
 class PartsController < ApplicationController
 
+# def confirmation
+#   render :confirmation
+# end
+
 def index
   if logged_in?
     render :index
@@ -22,6 +26,7 @@ def create
     redirect_to affirm_path(@order)
   end
 end
+
 
 def show
   if logged_in?
