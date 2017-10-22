@@ -33,7 +33,10 @@ RSpec.describe PartsController, type: :controller do
       post :create, params: {quantity: [1], part_desc: ["86951-Fan"]}
       expect(Part.last.name).to eq "Fan"
     end
-    it 'renders the :new '
+    it 'renders the :new template upon failure' do
+      post :create, params: {quantity: [0]}
+      expect(response).to render_template :new
+    end
   end
 
 
