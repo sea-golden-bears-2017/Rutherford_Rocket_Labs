@@ -1,5 +1,5 @@
 <section id = "inventory-index-page">
-  <h1>Inventory</h1>
+  <h1>Master Inventory</h1>
   <% Warehouse.all.each do |w|%>
     <h3><%= w.city %> <%= w.location_code %> :</h3>
     <%= render 'parttable', parts: Part.unique_parts_in_inventory(w.id), warehouse: w %>
