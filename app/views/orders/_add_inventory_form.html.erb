@@ -15,6 +15,11 @@
 </table>
 
 <h3>Part Summary</h3>
+<% if !flash.empty? %>
+<div class="flash">
+  <p style="color: red;"><%= flash[:alert] %></p>
+</div>
+<% end %>
 <table class='order-table-parts'>
 <tr>
 <th>Part Number</th>

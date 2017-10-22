@@ -48,10 +48,8 @@ def update_parts
   order_part_numbers_only.each do |part_no|
     index = order_part_numbers_only.index(part_no)
     parts = find_order.parts.where(part_no: part_no)
-    # order_difference = find_difference(quantity_received, quantity_ordered(find_order))
 
     if order_difference[index] == 0
-
       parts.each do |part|
         part.received_by_id = employee_logged_in.id
         part.save
