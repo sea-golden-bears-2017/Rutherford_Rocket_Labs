@@ -24,7 +24,7 @@
         <td><%= part.warehouse.location_code %></td>
         <td><%= link_to "remove", remove_path(part), method: :put%></td>
         <% if manager_logged_in? %>
-          <td><%= link_to "Transfer", edit_part_path(part) %> </td>
+          <td><%= link_to "transfer", edit_part_path(part) %> </td>
         <% end %>
       </tr>
     <% end %>
