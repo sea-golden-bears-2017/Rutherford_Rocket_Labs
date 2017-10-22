@@ -546,16 +546,21 @@ font-family: 'Slabo 27px', serif;
 /* end warehouse styles */
 
 /* order styles */
+#order-table th {
+  color: #000;
+}
+
 #order-confirm {
-  width: 400px;
+  width: 600px;
   margin: 0 auto;
   border: 1px solid gray;
-  border-radius: 25px;
   padding: 1.25em;
 }
 
 #order-confirm p {
+  font-size: 1.6em;
   color: green;
+  margin-bottom: 1.2em;
 }
 
 #order-confirm table {
@@ -579,17 +584,61 @@ font-family: 'Slabo 27px', serif;
 
 /* parts styles */
 
+
 .new-parts-ul li {
-  float: left;
+  width: 80%;
+  margin-bottom: 1.5em;
+  padding-bottom: 1.75em;
+  border-bottom: 1px solid #000;
 }
 
 #new-parts-page {
-  width: 500px;
+  width: 700px;
   margin: 0 auto;
   border: 1px solid gray;
-  border-radius: 25px;
   padding: 1.25em;
   overflow: hidden;
+}
+
+#new-order-page select,
+#new-parts-page select {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.6em;
+  border-radius: 0;
+}
+
+#new-order-page label,
+#new-parts-page label {
+  font-size: 1.4em;
+}
+
+#new-parts-page a {
+  padding: .25em;
+  color: #000;
+  font-family: 'Oswald', sans-serif;
+  font-style: italic;
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+
+#new-parts-page a:hover,
+#new-parts-page a:focus {
+  color: #c62128;
+}
+
+.order-parts {
+  float: right;
+  margin-bottom: 2em
+}
+
+#new-parts-page label {
+  font-family: 'Oswald', sans-serif;
+}
+
+.part-quantity {
+  float: right;
+  margin: 0;
+  margin-left: .45em
 }
 
 /* end parts styles */
@@ -611,7 +660,7 @@ font-family: 'Slabo 27px', serif;
   margin-bottom: .75em;
 }
 
-th {
+#inventory-index-page th {
   font-family: 'Oswald', sans-serif;
   color: #fff;
   height: 65px;
@@ -619,7 +668,7 @@ th {
   font-size: 1.4em;
 }
 
-td {
+#inventory-index-page td {
   height: 50px;
   font-family: 'Space Mono', monospace;
   text-align: center;
@@ -693,10 +742,6 @@ td {
   width: 300px;
 }
 
-#part-show-page th {
-  background-color: lime;
-}
-
 #part-show-page tr:nth-child(even) {
   background-color: white;
 }
@@ -710,7 +755,6 @@ td {
 #new-order-page {
   width: 50%;
   margin: 0 auto;
-  border-radius: 25px;
   padding: 5.25em;
   color: #000;
 }
@@ -718,14 +762,12 @@ td {
 #new-order-page form {
   border: 1px solid #000;
   padding: 1.25em;
-  border-radius: 25px;
   overflow: hidden;
 }
 
 .send-order {
   float: right;
 }
-
 
 #new-order-page input, label {
   display: block;
@@ -743,29 +785,46 @@ td {
 /*inventory table styles*/
 
 #order-index-page {
-  width: 70%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
+#order-index-page h1 {
+  font-family: 'Oswald', sans-serif;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
 #order-index-page table {
   text-align: left;
-  width: 80%;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
 }
 
 #order-index-page td {
   width: 300px;
+  height: 55px;
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+  font-size: 1.1em;
 }
 
 #order-index-page th {
-  background-color: lime;
+  background-color: #c62128;
+  height: 50px;
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6em;
 }
 
 #order-index-page tr {
   height: 25px;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 #order-index-page tr:nth-child(even) {
@@ -779,11 +838,15 @@ td {
 #order-index-page h1 {
   text-align: center;
 }
+
 #order-index-page h3 {
   color: #000;
   margin-left: 200px;
 }
 
+#order-index-page a {
+  color: #000;
+}
 
 /*end inventory table styles*/
 /* inventory show table styles*/
