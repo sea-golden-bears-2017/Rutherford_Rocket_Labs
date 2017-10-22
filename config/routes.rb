@@ -25,6 +25,6 @@ Rails.application.routes.draw do
 
   #parts routes
   get '/new_line', to: 'parts#new_line', as: 'new_line'
-  get '/parts/:id/remove', to: "parts#remove", as:"remove"
+  put '/parts/:id/remove', to: "parts#remove", as:"remove"
 
 end
