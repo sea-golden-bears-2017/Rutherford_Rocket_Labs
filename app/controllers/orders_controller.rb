@@ -32,6 +32,7 @@ class OrdersController < ApplicationController
 
   def update
     if quantity_received_zero?
+      flash.clear
       @order = Order.find(params[:id])
       flash.alert = "Please enter quantities received"
       render :edit
