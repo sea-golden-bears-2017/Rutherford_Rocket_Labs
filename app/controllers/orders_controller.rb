@@ -31,7 +31,6 @@ class OrdersController < ApplicationController
   end
 
   def update
-    4/0
     flash[:notice] = "Your new inventory has been added!"
     redirect_to root_path
   end
