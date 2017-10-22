@@ -551,15 +551,21 @@ font-family: 'Slabo 27px', serif;
   color: #000;
 }
 
+#order-confirm h3 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 #order-confirm {
   width: 600px;
   margin: 0 auto;
   border: 1px solid gray;
   padding: 1.25em;
+  font-size: 1.3em;
 }
 
 #order-confirm p {
-  font-size: 1.6em;
+  font-size: 1em;
   color: green;
   margin-bottom: 1.2em;
 }
