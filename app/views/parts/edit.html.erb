@@ -1,0 +1,20 @@
+<section id="transfer-part">
+  <h2>Tranfer a Part</h2>
+  <%= form_for @part do |f| %>
+    <%= f.label "Part Number" %>
+    <%= f.text_field :part_no, disabled: true %>
+    <%= f.label "Part Name" %>
+    <%= f.text_field :name, disabled: true %>
+    <%= f.label "Warehouse City" %>
+    <%= f.text_field :warehouse, value: "#{@part.warehouse.city}", disabled: true %>
+    <%= f.label "Warehouse Location Code" %>
+    <%= f.text_field :warehouse, value: "#{@part.warehouse.location_code}", disabled: true %>
+    <%= f.label "Transfer Warehouse" %>
+    <%= f.select(:warehouse_id) do %>
+      <% Warehouse.all.each do |w| %>
+      <%= content_tag(:option, w.location_code, value: w.id) %>
+      <% end %>
+    <% end %>
+    <%= button_to "Transfer Part", part_path(@part), method: :put, class: 'submit-button transfer' %>
+  <% end %>
+</section>

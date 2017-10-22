@@ -12,6 +12,9 @@
       <th>Name</th>
       <th>Location</th>
       <th>Remove</th>
+      <% if manager_logged_in? %>
+        <th>Transfer</th>
+      <% end %>
     </tr>
     <% @parts.joins(:warehouse).merge(Warehouse.order(:location_code)).each do |part| %>
       <tr>
@@ -20,6 +23,9 @@
         <td><%= part.name.capitalize %></td>
         <td><%= part.warehouse.location_code %></td>
         <td><%= link_to "remove", remove_path(part), method: :put%></td>
+        <% if manager_logged_in? %>
+          <td><%= link_to "transfer", edit_part_path(part) %> </td>
+        <% end %>
       </tr>
     <% end %>
   </table>

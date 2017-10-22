@@ -131,7 +131,8 @@ header {
   line-height: 1.5em;
   font-family: 'Slabo 27px', serif;
   color: #fff;
-  padding-bottom: 2.5em;
+  margin-bottom: 2.5em;
+  font-size: 1.2em;
 }
 
 form {
@@ -987,6 +988,22 @@ font-family: 'Slabo 27px', serif;
   font-family: 'Space Mono', monospace;
   text-align: center;
 }
+
+/* transfer part */
+
+#transfer-part {
+  margin-top: 5em;
+  width: 40%;
+  margin: 0 auto;
+  border: 1px solid;
+  padding: 1.25em;
+  overflow: hidden;
+}
+
+.transfer {
+  float: right;
+}
+/* end transfer part */
 
 /* end add inventory page */
 
