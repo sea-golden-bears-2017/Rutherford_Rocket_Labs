@@ -26,6 +26,15 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
+  def edit
+    @order = Order.find(params[:id])
+  end
+
+  def update
+    flash[:notice] = "Your new inventory has been added!"
+    redirect_to root_path
+  end
+
   private
     def orders_params
       params.require(:order).permit(:description, :warehouse_id)
