@@ -13,7 +13,7 @@ class Part < ApplicationRecord
   end
 
   def self.unique_parts_in_inventory(warehouse_id)
-    Part.where(warehouse_id: 1, received_by_id: !nil, removed: false).select('distinct on (name) *')
+    Part.where(warehouse_id: warehouse_id, received_by_id: !nil, removed: false).select('distinct on (name) *')
   end
 
   def self.number_and_name
