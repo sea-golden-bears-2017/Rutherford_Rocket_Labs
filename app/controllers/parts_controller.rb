@@ -35,6 +35,7 @@ def show
   else
     redirect_to '/'
   end
+  flash.clear
 end
 
 def edit
@@ -47,14 +48,15 @@ def edit
 end
 
 def update
-  ##FIXME show routes reflects part number. consider updating to name instead
   part = Part.find(params[:id])
-  if parts_params[:warehouse_id] != part.warehouse_id
+  @parts = Part.all_of_type_in_inventory(part.part_no)
+  if parts_params[:warehouse_id].to_i != part.warehouse_id
     part.update(parts_params)
     flash[:success] = "You transferred Part #{part.id} '#{part.part_no} #{part.name}' to Warehouse #{part.warehouse.location_code}"
-    redirect_to part_path(part)
+    render :show
   else
-    redirect_to part_path(part)
+    flash[:alert] = "This part already resides at #{part.warehouse.location_code}. Please choose another warehouse if you wish to transfer successfully."
+    render :show
   end
 end
 
