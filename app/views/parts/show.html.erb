@@ -4,6 +4,11 @@
     <h3>nothing to show</h3>
   <% else %>
 <h3> <%= @parts[0].part_no %>: <%= @parts[0].name.capitalize %> </h3>
+  <% if !flash.empty? %>
+    <div class="flash">
+      <p style="color: green;"><%= flash[:success] %></p>
+    </div>
+  <% end %>
   <table >
     <thead>
     <tr>
