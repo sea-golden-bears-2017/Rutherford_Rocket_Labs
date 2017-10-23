@@ -48,6 +48,7 @@ def edit
 end
 
 def update
+  flash.clear
   part = Part.find(params[:id])
   @parts = Part.all_of_type_in_inventory(part.part_no)
   if parts_params[:warehouse_id].to_i != part.warehouse_id
