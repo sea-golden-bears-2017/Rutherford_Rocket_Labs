@@ -1,0 +1,1053 @@
+/* css document */
+
+
+body, body * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  clear: both;
+}
+
+img {
+  padding-top: 1.25em;
+  padding-left: .55em;
+  width: 45%;
+  text-align: left;
+}
+
+img:hover,
+img:focus {
+  opacity: 0.5;
+  transition: .3s;
+}
+
+header {
+  border-bottom: 1px solid gray;
+  box-shadow: 1px 5px 15px #888888;
+}
+
+/* login-page styles */
+
+#main-logo {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.45em;
+  position: fixed;
+}
+
+.welcome span {
+   color: #c62128;
+}
+
+#main-logo a {
+  text-decoration: none;
+  color: #000;
+}
+
+#login-page {
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://s3-us-west-2.amazonaws.com/eb-rutherford-rl/launch-dark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  z-index: -100;
+}
+
+#login-page h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+#login-page nav {
+  display: none;
+}
+
+#login-page h1 {
+  padding-top: 1.5em;
+  font-style: italic;
+  font-size: 4em;
+  transform: rotate(-10deg);
+}
+
+.welcome {
+  font-size: 3em;
+  text-align: center;
+  color: #babec4;
+}
+
+.welcome {
+  color: #babec4;
+}
+
+#login-page h2 {
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+  transform: rotate(-10deg);
+  margin-bottom: 2em;
+  color: #c62128;
+}
+
+.employee-login {
+  width: 400px;
+  margin: 0 auto;
+  border: 1px solid #fff;
+  padding: 1.25em;
+}
+
+.employee-login h2 {
+  color: #fff;
+  margin-bottom: .66em;
+}
+
+#mission-statement {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 5.45em;
+  padding: .5em;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #fff;
+}
+
+#login-page h3 {
+  font-size: 1.6em;
+  color #fff;
+  text-align: center;
+  padding-bottom: 1.2em;
+}
+
+#mission-statement p {
+  line-height: 1.5em;
+  font-family: 'Slabo 27px', serif;
+  color: #fff;
+  margin-bottom: 2.5em;
+  font-size: 1.2em;
+}
+
+form {
+  font-family: 'Slabo 27px', serif;
+  color: #fff;
+}
+
+label {
+  margin-bottom: .35em;
+}
+
+input {
+  font-size: 1.75em;
+  padding: .12em;
+  display: block;
+  margin-top: .35em;
+  margin-bottom: .65em;
+  border: 1px solid gray;
+  outline: none;
+}
+
+.submit-button {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  background-color: #fff;
+  padding: .25em;
+  width: 160px;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  background-color: #c62128;
+  color: #fff;
+}
+
+.errors {
+  font-size: 1em;
+  font-weight: bold;
+  color: red;
+}
+.errors p {
+  font-size: 1em;
+  font-weight: bold;
+  color: red;
+}
+
+/* end login page styles */
+
+/* application.html styles */
+
+#layout-header {
+  margin-top: 2.5em;
+  margin-right: 3.5em;
+  float: right;
+  overflow: hidden;
+}
+
+.banner-logo {
+  width: 100%;
+  height: 60px;
+}
+
+.banner-logo span {
+  color: #c62128;
+}
+
+.banner-logo h4 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  padding-left: .55em;
+  padding-top: .55em;
+  font-size: 1.6em;
+  font-style: italic;
+}
+
+.banner-logo a {
+  color: #000;
+  text-decoration: none;
+}
+
+.banner-logo a:hover,
+.banner-logo a:focus {
+  color: gray;
+}
+
+#layout-header li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
+  float: left;
+}
+
+#layout-header ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+.logout {
+  font-family: 'Oswald', sans-serif;
+  font-size: .9em;
+  border: none;
+  background-color: #fff;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.logout:hover,
+.logout:focus {
+  color: #c62128;
+}
+
+/* end application.html styles */
+
+/* homepage styles */
+
+#homepage {
+  color: #000;
+  width: 100%;
+  clear: both;
+}
+
+#homepage-container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 1.25em;
+  padding-top: 3em;
+}
+
+#homepage h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1em;
+  padding-top: .75em;
+  padding-bottom: .75em;
+  border-bottom: 1px solid gray;
+}
+
+#homepage h2 {
+  font-size: 1.5em;
+  padding-top: .75em;
+  padding-bottom: .75em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+#homepage h3 {
+  margin-bottom: .5em;
+}
+
+#main-nav {
+  /*border-bottom: 2px solid #000;
+  border-top: 2px solid #000;*/
+  width: 100%;
+  margin: 0 auto;
+}
+
+#homepage p {
+text-align: justify;
+line-height: 1.3em;
+font-family: 'Slabo 27px', serif;
+}
+
+/* begin employee nav */
+#main-nav-manager {
+  border-bottom: 2px solid #000;
+  border-top: 2px solid #000;
+  overflow: hidden;
+}
+
+#main-nav-manager ul {
+  margin-left: 35px;
+  list-style-type: none;
+}
+
+#main-nav {
+  overflow: hidden;
+}
+
+#main-nav li {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  display: block;
+  float: left;
+  text-align: center;
+  font-size: 1.5em;
+  width: 25%;
+  border: 3px solid #424143;
+  margin-right: 1em;
+  display: block;
+  text-decoration: none;
+}
+
+#main-nav a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+#main-nav a:link,
+#main-nav a:visited {
+    color: #000;
+}
+
+#main-nav a:hover,
+#main-nav a:focus {
+  color: #fff;
+  background-color: #c62128;
+}
+
+#main-nav-manager li {
+  display: block;
+  float: left;
+  text-align: center;
+  font-size: 20px;
+  width: 32%;
+}
+
+#main-nav-manager a {
+  color: #000;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+}
+
+#main-nav-manager a:hover {
+  background-color: #c62128;
+  color: white;
+}
+/* end employee nav */
+
+#homepage p {
+  text-align: justify;
+  line-height: 1.5em;
+  font-family: 'Slabo 27px', serif;
+  color: gray;
+  margin-bottom: 1em;
+}
+
+#manager-nav {
+  overflow: hidden;
+}
+
+.site-function {
+  border: 1px solid gray;
+  padding: 1.25em;
+  margin-top: 2em;
+}
+
+#manager-nav li {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  display: block;
+  float: left;
+  text-align: center;
+  font-size: 1em;
+  width: 25%;
+  border: 3px solid #424143;
+  margin-right: 1em;
+}
+
+#manager-nav a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#manager-nav a:link,
+#manager-hav a:visited {
+  color #000;
+}
+
+#manager-nav a:hover,
+#manager-hav a:focus {
+  color: #fff;
+  background-color: #c62128;
+}
+
+/* begin manager nav */
+#main-nav-employee {
+  border-bottom: 2px solid #000;
+  border-top: 2px solid #000;
+  overflow: hidden;
+}
+
+#main-nav-employee ul {
+  margin-left: 35px;
+  list-style-type: none;
+}
+
+#main-nav-employee li {
+  display: block;
+  float: left;
+  text-align: center;
+  font-size: 20px;
+  width: 48%;
+}
+
+#main-nav-employee a {
+  color: #000;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+}
+
+#main-nav-employee a:hover,
+#main-nav-employee a:focus {
+  background-color: #c62128;
+  color: white;
+}
+/* end manager nav */
+
+/* end homepage styles */
+
+/* new employee-page styles */
+
+#new-employee-page h2 {
+  margin-bottom: 1.2em;
+}
+
+#new-employee-page h1, h2, h3, label {
+  color: #000;
+}
+
+#new-employee-page {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid;
+  padding: 1.25em;
+  color: #000;
+}
+
+#employee-confirm {
+  width: 400px;
+  margin: 0 auto;
+  border: 1px solid gray;
+  padding: 1.25em;
+}
+
+#employee-confirm p.success {
+  color: green;
+  font-style: normal;
+}
+
+#employee-confirm p {
+  font-style: italic;
+}
+
+#employee-confirm table {
+  text-align: left;
+}
+
+/* end new employee-page styles */
+
+/* warehouse styles */
+
+#warehouse-new-page {
+  margin-top: 14em;
+}
+
+.warehouse-details {
+  margin-bottom: 1em;
+}
+
+#warehouse-new-page h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.75em;
+}
+
+#warehouse-new-page p {
+  padding-top: .55em;
+  line-height: 1.4em;
+  color: gray;
+  font-family: 'Slabo 27px', serif;
+  font-size: 1.2em;
+}
+
+.new-warehouse-container {
+  width: 700px;
+  border: 1px solid;
+  margin: 0 auto;
+  padding: 1.25em;
+}
+
+#warehouse-new-page h1, h2, h3, label {
+  color: #000;
+}
+
+#warehouse-confirm {
+  width: 400px;
+  margin: 0 auto;
+  border: 1px solid gray;
+  padding: 1.25em;
+}
+
+#warehouse-confirm p {
+  color: green;
+}
+
+#warehouse-confirm table {
+  text-align: left;
+}
+
+/* end warehouse styles */
+
+/* order styles */
+#order-table th {
+  color: #000;
+}
+
+#order-confirm h3 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#order-confirm {
+  width: 600px;
+  margin: 0 auto;
+  border: 1px solid gray;
+  padding: 1.25em;
+  font-size: 1.3em;
+}
+
+#order-confirm p {
+  font-size: 1em;
+  color: green;
+  margin-bottom: 1.2em;
+}
+
+#order-confirm table {
+  text-align: left;
+}
+
+#order-confirm h3 {
+  color: #c62128;
+}
+
+/*.order-table,
+.order-table-parts {
+  border-collapse: separate;
+  border-spacing: .5em;
+}
+
+.order-table-parts td.quantity {
+  text-align: center;
+}*/
+/*end order styles */
+
+/* parts styles */
+
+
+.new-parts-ul li {
+  width: 80%;
+  margin-bottom: 1.5em;
+  padding-bottom: 1.75em;
+  border-bottom: 1px solid #000;
+}
+
+#new-parts-page {
+  width: 700px;
+  margin: 0 auto;
+  border: 1px solid gray;
+  padding: 1.25em;
+  overflow: hidden;
+}
+
+#new-order-page select,
+#new-parts-page select {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.6em;
+}
+
+#new-order-page label,
+#new-parts-page label {
+  font-size: 1.4em;
+}
+
+#new-parts-page a {
+  padding: .25em;
+  color: #000;
+  font-family: 'Oswald', sans-serif;
+  font-style: italic;
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+
+#new-parts-page a:hover,
+#new-parts-page a:focus {
+  color: #c62128;
+}
+
+.order-parts {
+  float: right;
+  margin-bottom: 2em
+}
+
+#new-parts-page label {
+  font-family: 'Oswald', sans-serif;
+}
+
+.part-quantity {
+  float: right;
+  margin: 0;
+  margin-left: .45em
+}
+
+/* end parts styles */
+
+/*inventory table styles*/
+
+#inventory-index-page h1 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#inventory-index-page h3 {
+  font-size: 1.75em;
+  color: #4b4d4f;
+  text-align: center;
+  margin-top: .75em;
+  margin-bottom: .75em;
+}
+
+#inventory-index-page th {
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  height: 65px;
+  text-align: center;
+  font-size: 1.4em;
+}
+
+#inventory-index-page td {
+  height: 50px;
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+}
+
+#inventory-index-page {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#inventory-index-page table {
+  text-align: left;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#inventory-index-page td {
+  width: 300px;
+}
+
+#inventory-index-page th {
+  background-color: #c62128;
+}
+
+#inventory-index-page tr {
+  height: 25px;
+  font-size: 1.2em;
+}
+
+#inventory-index-page tr:nth-child(even) {
+  background-color: white;
+}
+
+#inventory-index-page tr:nth-child(odd) {
+  background-color: gainsboro;
+}
+
+#inventory-index-page a {
+  color: #000;
+}
+
+/*end inventory table styles*/
+
+/* inventory show table styles*/
+#part-show-page {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#part-show-page h3 {
+  color: #000;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 1.5em;
+  margin-bottom: 2em;
+}
+
+#part-show-page table {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#part-show-page tr {
+  height: 25px;
+  font-size: 1.2em;
+}
+
+#part-show-page th {
+  font-family: 'Oswald', sans-serif;
+  background-color: #c62128;
+  height: 60px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.3em;
+}
+
+#part-show-page td {
+  width: 300px;
+  height: 50px;
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+}
+
+#part-show-page a {
+  color: #000;
+}
+
+#part-show-page tr:nth-child(even) {
+  background-color: white;
+}
+
+#part-show-page tr:nth-child(odd) {
+  background-color: gainsboro;
+}
+
+/* new orders styles */
+
+#new-order-page {
+  width: 50%;
+  margin: 0 auto;
+  padding: 5.25em;
+  color: #000;
+}
+
+#new-order-page form {
+  border: 1px solid #000;
+  padding: 1.25em;
+  overflow: hidden;
+}
+
+.send-order {
+  float: right;
+}
+
+#new-order-page input, label {
+  display: block;
+  margin-top: .55em;
+}
+
+.part-quantity {
+  width: 50px;
+}
+
+/* end new orders styles */
+
+/* end inventory show table styles*/
+
+/*inventory table styles*/
+
+#order-index-page {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#order-index-page h1 {
+  font-family: 'Oswald', sans-serif;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+#order-index-page table {
+  text-align: left;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#order-index-page td {
+  width: 300px;
+  height: 55px;
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+#order-index-page th {
+  background-color: #c62128;
+  height: 50px;
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6em;
+}
+
+#order-index-page tr {
+  height: 25px;
+  font-size: 1em;
+}
+
+#order-index-page tr:nth-child(even) {
+  background-color: white;
+}
+
+#order-index-page tr:nth-child(odd) {
+  background-color: gainsboro;
+}
+
+#order-index-page h1 {
+  text-align: center;
+}
+
+#order-index-page h3 {
+  color: #000;
+  margin-left: 200px;
+}
+
+#order-index-page a {
+  color: #000;
+}
+
+/*end inventory table styles*/
+
+
+/* inventory show table styles*/
+#order-show-page {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#order-show-page h3 {
+  color: #000;
+  margin-left: 200px;
+}
+#order-show-page table {
+  text-align: left;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#order-show-page tr {
+  height: 25px;
+  font-size: 1.2em;
+}
+
+#order-show-page td {
+  width: 300px;
+}
+#order-show-page th {
+  background-color: lime;
+}
+#order-show-page tr:nth-child(even) {
+  background-color: white;
+}
+#order-show-page tr:nth-child(odd) {
+  background-color: gainsboro;
+}
+
+#order-confirm h3 {
+  font-size: 1.5em;
+}
+
+#order-confirm tr {
+  font-family: 'Space Mono', monospace;
+}
+
+#order-confirm th {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
+}
+/* end inventory show table styles*/
+
+/* add inventory page */
+
+#add-inventory-page {
+  width: 65%;
+  margin: 0 auto;
+  border: 1px solid;
+  padding: 1.25em;
+}
+
+#add-inventory-page h3 {
+  font-size: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#add-inventory-page tr {
+  font-size: 1.3em;
+  margin-left: 0;
+  text-align: left;
+}
+
+#add-inventory-page td {
+  text-align: right;
+}
+
+.order-table-parts tr th {
+  height: 50px;
+  background-color: #c62128;
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  text-align: center;
+  width: 25%;
+}
+
+#add-inventory-page tr:nth-child(even) {
+  background-color: white;
+}
+
+#add-inventory-page tr:nth-child(odd) {
+  background-color: gainsboro;
+}
+
+#add-inventory-page tr th {
+  height: 60px;
+  width: 30%;
+  font-family: 'Oswald', sans-serif;
+}
+
+#add-inventory-page tr td {
+  height: 60px;
+  color: #000;
+  text-align: center;
+  font-family: 'Space Mono', monospace;
+}
+
+.order-table-parts tr th {
+  color: #fff;
+}
+
+.order-table-parts tr {
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+}
+
+/* transfer part */
+
+#transfer-part {
+  margin-top: 5em;
+  width: 40%;
+  margin: 0 auto;
+  border: 1px solid;
+  padding: 1.25em;
+  overflow: hidden;
+}
+
+.transfer {
+  float: right;
+}
+/* end transfer part */
+
+/* end add inventory page */
+
+/* all table styles */
+
+/* end table styles */
+
+/*  new order styles */
+
+/* end new order styles */
+
+/* flash styles */
+
+div.notice {
+  color: red;
+}
+/* end flash styles */
+
+
+/* footer styles */
+footer {
+  background-color: #35383d;
+  padding: 4em;
+  margin-top: 2em;
+  color: #fff;
+  text-align: center;
+  clear: both;
+  font-family: 'Slabo 27px', serif;
+  font-size: .9em;
+}
+/* end footer styles */
+#login-page h3 {
+  color: #fff;
+}
+
+.flash {
+  padding: 25px;
+  border: 1px solid grey;
+  margin-bottom: 50px;
+}
+
+.back-button {
+  font-family: 'Space Mono', monospace;
+  color: #000;
+  font-size: 1.3em;
+}
