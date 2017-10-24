@@ -55,7 +55,7 @@ header {
 #login-page {
   width: 100%;
   height: 100vh;
-  background-image: url(https://s3.amazonaws.com/eb-rutherford-rl/launch-dark.png);
+  background-image: url(https://s3-us-west-2.amazonaws.com/eb-rutherford-rl/launch-dark.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
