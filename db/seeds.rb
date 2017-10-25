@@ -26,8 +26,8 @@ Employee.create(first_name: "Jules", last_name: "Dr", employee_id: 0001, passwor
 
 Part.create!(name: "o-ring", part_no: 35466, warehouse_id: 1, received_by_id: 2, removed: false)
 
-20.times { Part.create!(name: "beaker", part_no: 20001, warehouse_id: [1,2,3,4,5,6,7].sample, received_by_id: [1,2].sample, removed: false) }
-20.times { Part.create!(name: "thruster", part_no: 69021, warehouse_id: [1,2,3,4,5,6,7].sample, received_by_id: [1,2].sample, removed: false) }
+1000.times { Part.create!(name: "beaker", part_no: 20001, warehouse_id: [1,2,3,4,5,6,7].sample, received_by_id: [1,2].sample, removed: false) }
+200.times { Part.create!(name: "thruster", part_no: 69021, warehouse_id: [1,2,3,4,5,6,7].sample, received_by_id: [1,2].sample, removed: false) }
 20.times { Part.create!(name: "fan", part_no: 86951, warehouse_id: [1,2,3,4,5,6,7].sample, received_by_id: [1,2].sample, removed: false) }
 20.times { Part.create!(name: "cooling unit", part_no: 45862, warehouse_id: [1,2,3,4,5,6,7].sample, received_by_id: [1,2].sample, removed: false) }
 20.times { Part.create!(name: "safety blanket", part_no: 35486, warehouse_id: [1,2,3,4,5,6,7].sample, received_by_id: [1,2].sample, removed: false) }
