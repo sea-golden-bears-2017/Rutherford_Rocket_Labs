@@ -3,7 +3,7 @@ class Part < ApplicationRecord
   belongs_to :remover, foreign_key: :removed_by_id, class_name: :Employee, optional: true
   belongs_to :receiver, foreign_key: :received_by_id, class_name: :Employee, optional: true
   belongs_to :order, optional: true
-  
+  # paginates_per 50
 
   def self.all_of_type_in_inventory(part_no)
     Part.where(received_by_id: !nil, removed: false, part_no: part_no)

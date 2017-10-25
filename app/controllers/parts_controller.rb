@@ -31,8 +31,8 @@ end
 def show
   if logged_in?
     part = Part.find(params[:id])
-    @parts = Part.all_of_type_in_inventory(part.part_no)
-    # @parts = Part.all_of_type_in_inventory(part.part_no).page params[:page]
+    # @parts = Part.all_of_type_in_inventory(part.part_no)
+    @parts = Part.all_of_type_in_inventory(part.part_no).page params[:page]
   else
     redirect_to '/'
   end
